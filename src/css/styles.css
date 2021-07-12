@@ -1,5 +1,25 @@
+
 body, html {
   background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  background-color: pink;
   background-repeat: no-repeat;
   height: 100%;
+}
+
+.quarter {
+    background: yellow;
+    border-top-right-radius:0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 100%;
+    width: 400px;
+    height: 400px;
+}
+.rectangle {
+  border-radius: 25px;
+  background: white;
+  border: black;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
 }
