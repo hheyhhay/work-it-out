@@ -1,5 +1,68 @@
-body, html {
-  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+
+html {
+  /* background-image: linear-gradient(to bottom, #BADFFF 50%, #F5A523 99%, #FF829B 100%);
+  background-color: pink; */
+
   background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
+  width: 100%;
+
+  background: rgb(238,174,202);
+  background: linear-gradient(to bottom, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+  height: 100%;
+
+}
+
+.quarter {
+    background: rgb(250,199,17);
+    border-top-right-radius:0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 100%;
+    width: 200px;
+    height: 200px;
+    position: right;
+}
+
+.personal-info {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+}
+.rectangle {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  border-radius: 25px;
+  background: white;
+  border: 1px solid black;
+  padding: 20px;
+  width: 150px;
+  height: 200px;
+}
+/* .circle-div {
+  display: flex;
+} */
+
+.circle {
+  display: flex;
+  justify-content: center;
+  background: rgba(46, 155, 240,1);
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+.moon {
+  background-color: rgba(84,93,186,1)
+}
+.activity {
+  background-color: rgba(10,167,137,1);
 }

@@ -13,7 +13,7 @@ class UserRepository {
     let averageSteps = this.users.reduce((average, user) => {
       average += user.dailyStepGoal
       return average
-    }, 0)/this.users.length
+    }, 0) / this.users.length
     return averageSteps
   }
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Work it out</title>
+</head>
+
+<body>
+  <div class="quarter">
+    <h1> hello, Gladys </h1>
+  </div>
+  <h2>You've got this: </h2>
+  <div class="personal-info">
+    <section class="rectangle">
+      <div class="circle water">
+        <img src="https://img.icons8.com/ios/50/000000/splash.png" />
+      </div>
+
+      <h3> Your water consumption is: 30% </h3>
+    </section>
+    <section class="rectangle">
+      <div class="circle moon">
+        <img src="https://img.icons8.com/dotty/80/000000/crescent-moon.png" />
+      </div>
+      <h3> You slept 5.6 hours </h3>
+    </section>
+    <section class="rectangle">
+      <div class="circle activity">
+        <img src="https://img.icons8.com/wired/64/000000/wind.png" />
+      </div>
+      <h3> You are 10 steps away from your goal </h3>
+    </section>
+  </div>
+  <canvas id="myChart" width="400" height="400"></canvas>
+  <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
+<!-- refs to use the icons -->
+<!-- <a href="https://icons8.com/icon/hnkeIzAS1bgA/crescent-moon">Crescent Moon icon by Icons8</a> -->
+<!-- <a href="https://icons8.com/icon/6glxXZNx3olg/splash">Splash icon by Icons8</a> -->
+<!-- <a href="https://icons8.com/icon/3T49CbZymg8U/wind">Wind icon by Icons8</a> -->
