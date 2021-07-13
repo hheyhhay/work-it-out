@@ -24,7 +24,7 @@ describe('User Repository', () => {
         "email": "Dimitri.Bechtelar11@gmail.com",
         "strideLength": 4.5,
         "dailyStepGoal": 5000,
-        "friends": [9, 18, 24, 19]
+         "friends": [9, 18, 24, 19]
       }
     ])
   })
