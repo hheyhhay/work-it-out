@@ -5,11 +5,9 @@ class User {
     this.user = userRepo
   }
 
-  returnFirstName() {
-    let firstName = this.user.users.find((user) => {
-      console.log(user.name)
-    })
-    return firstName
+  returnFirstName(user) {
+    let firstName = user.split(' ')
+    return firstName[0]
   }
 
 }
