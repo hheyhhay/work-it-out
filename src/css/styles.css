@@ -27,8 +27,8 @@ body {
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 100%;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     position: right;
 }
 
@@ -43,10 +43,10 @@ body {
   justify-content: center;
   border-radius: 25px;
   background: white;
-  border: black;
+  border: 1px solid black;
   padding: 20px;
-  width: 200px;
-  height: 150px;
+  width: 150px;
+  height: 200px;
 }
 /* .circle-div {
   display: flex;
