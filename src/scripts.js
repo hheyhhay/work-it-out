@@ -14,5 +14,10 @@ console.log('This is the JavaScript entry file - your code begins here.');
 
 import userData from './data/users';
 import UserRepository from './UserRepository';
+<<<<<<< HEAD
 import {getData} from './apiCalls';
 console.log(getData)
+=======
+
+console.log('HELLO?')
+>>>>>>> main
