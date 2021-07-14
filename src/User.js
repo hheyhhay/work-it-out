@@ -1,4 +1,5 @@
 const UserRepository = require('./UserRepository')
+const APIcalls = require('./apiCalls')
 
 class User {
   constructor(userRepo) {
