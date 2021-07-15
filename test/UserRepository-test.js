@@ -34,18 +34,23 @@ describe('User Repository', () => {
     expect(UserRepository).to.be.a('function');
   });
 
-  it('should be an instance of the user repository', () => {
+  it('should be an instance of the user repository and should be an array', () => {
     expect(userRepo).to.be.an.instanceof(UserRepository);
   });
 
   it('should show user data by ID', () => {
-    console.log(userRepo.getUserbyID(1))
-    console.log('userRepo[0]', userRepo[0])
-    console.log(userRepo)
+    // console.log(userRepo.getUserbyID(1))
+    // console.log('userRepo[0]', userRepo[0])
+    // console.log(userRepo)
     expect(userRepo.getUserbyID(1)).to.deep.equal(userRepo[0])
   })
 
   it('should show average steps amongst of all users', () => {
+    console.log(userRepo.averageStepGoal())
+    console.log('userRepo.length', userRepo.length)
+    console.log('userRepo', userRepo)
+    console.log('userRepo.users', userRepo.users)
     expect(userRepo.averageStepGoal()).to.equal(7500)
   })
+
 });
