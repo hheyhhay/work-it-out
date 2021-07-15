@@ -1,11 +1,15 @@
 class UserRepository {
   constructor(userData) {
-    this.users = userData
+    this.users = userData;
   }
 
   getUserbyID(userID) {
+
     this.users.find((user) => {
-      return user.id === userID
+      if(user.id === userID) {
+        user.id === userID
+        return user
+      }
     })
   }
 
