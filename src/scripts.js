@@ -1,22 +1,35 @@
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
-
-// An example of how you tell webpack to use a CSS file
+//🏎 Imports🏎
 import './css/styles.css';
-
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
-// import turing-logo from './images/turing-logo.png'
-
-// console.log('This is the JavaScript entry file - your code begins here.');
-// console.log(getData)
-
-// An example of how you tell webpack to use a JS file
-
 import userData from './data/users';
 import UserRepository from './UserRepository';
+import {getData, sleepData, activityData} from './apiCalls';
 
-import {getData} from './apiCalls';
-console.log('1', getData)
+//👂🏽 Event Listeners 👂🏽
+window.addEventListener('load', fetchData)
 
-console.log('helo')
-console.log('HELLO?')
+//🌍  Global Variables 🌍
+let userDataArray = [];
+let sleepDataArray = [];
+let activityDataArray = [];
+let hydrationDataArray = [];
+
+//✨ Functions ✨
+function fetchData() {
+  Promise.all([getData(), sleepData(), activityData()]).then((values) =>
+    parseValues(values))
+};
+
+function parseValues(values) {
+  values[0].userData.forEach((value) => {
+    userDataArray.push(value)
+  })
+  values[1].sleepData.forEach((value) => {
+    sleepDataArray.push(value)
+  })
+  values[2].activityData.forEach((value) => {
+    activityDataArray.push(value)
+  })
+  values[3].hydrationData.forEach((value) => {
+    hydrationDataArray.push(value)
+  })
+}
