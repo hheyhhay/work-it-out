@@ -22,9 +22,13 @@ function fetchData() {
 };
 
 function parseValues(values) {
-  values[0].userData.forEach((value) => {
-    // console.log('value', value)
-    userDataArray.push(value)
+  values[0].userData.forEach((value, i) => {
+    return userDataArray.push(value[i])
+
+/*Hayley's notes: I beleive this is return an empty array with some how the objects
+outside of it? Each value console is the right thing, but it for some reason isn't going into
+the array? */
+
     //this is an array of all users
   })
   values[1].sleepData.forEach((value) => {
@@ -39,20 +43,17 @@ function parseValues(values) {
   })
 }
 
+
+
 console.log(userDataArray)
-console.log(new UserRepository(userDataArray))
+
 let apiData = new UserRepository(userDataArray)
-console.log(apiData.averageStepGoal())
-console.log(apiData.getUserbyID(4))
-// apiData.getUserbyID(4);
+// instantiation of UserRepositiory
+console.log(apiData.averageStepGoal()) // comes out NAN
+console.log(apiData.getUserbyID(4)) // undefined
 
 
-// let apiData = New UserRepository(userData);
-// // console.log(apiData)
-// //expect: should house all users here
-// //actual: parseing error
-//
-// console.log(apiData)
+console.log('sleep array', sleepDataArray) // also does not work
 
-// console.log(sleepDataArray)
+
 // console.log('hi')
