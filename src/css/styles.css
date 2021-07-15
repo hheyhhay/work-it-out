@@ -1,32 +1,26 @@
 
-require('./css/styles.css');
-
-
 body {
-
   background-size: cover;
   height: 100%;
   width: 100%;
-
-  background: rgb(238,174,202);
-  background: linear-gradient(to bottom, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)
+  background: rgb(238, 174, 202);
+  background: linear-gradient(to bottom, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   margin: 0;
   height: 100%;
-
 }
 
 .quarter {
-    background: rgb(250,199,17);
-    border-top-right-radius:0;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 100%;
-    width: 200px;
-    height: 200px;
-    position: right;
+  background: rgb(250, 199, 17);
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 100%;
+  width: 200px;
+  height: 200px;
+  position: right;
 }
 
 .personal-info {
@@ -34,9 +28,10 @@ body {
   justify-content: space-around;
   border: 2px solid black;
 }
+
 .rectangle {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   border-radius: 25px;
   background: white;
@@ -45,21 +40,23 @@ body {
   width: 150px;
   height: 200px;
 }
+
 /* .circle-div {
   display: flex;
 } */
-
 .circle {
   display: flex;
   justify-content: center;
-  background: rgba(46, 155, 240,1);
+  background: rgba(46, 155, 240, 1);
   border-radius: 100%;
   width: 100px;
   height: 100px;
 }
+
 .moon {
-  background-color: rgba(84,93,186,1)
+  background-color: rgba(84, 93, 186, 1)
 }
+
 .activity {
-  background-color: rgba(10,167,137,1);
+  background-color: rgba(10, 167, 137, 1);
 }
