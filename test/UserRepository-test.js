@@ -4,8 +4,8 @@ import {
 import UserRepository from '../src/UserRepository';
 
 describe('User Repository', () => {
-
   let userRepo;
+
   beforeEach(() => {
     userRepo = new UserRepository([{
         "id": 1,
@@ -39,7 +39,10 @@ describe('User Repository', () => {
   });
 
   it('should show user data by ID', () => {
-    expect(userRepo.getUserbyID(1)).to.equal(userRepo[0])
+    console.log(userRepo.getUserbyID(1))
+    console.log('userRepo[0]', userRepo[0])
+    console.log(userRepo)
+    expect(userRepo.getUserbyID(1)).to.deep.equal(userRepo[0])
   })
 
   it('should show average steps amongst of all users', () => {
