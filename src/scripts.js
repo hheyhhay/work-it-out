@@ -24,7 +24,7 @@ function fetchData() {
 function parseValues(values) {
   values[0].userData.forEach((value, i) => {
     return userDataArray.push(value[i])
-
+// Do we need to invoke .parse() to achually parse?
 /*Hayley's notes: I beleive this is return an empty array with some how the objects
 outside of it? Each value console is the right thing, but it for some reason isn't going into
 the array? */
@@ -51,6 +51,8 @@ let apiData = new UserRepository(userDataArray)
 // instantiation of UserRepositiory
 console.log(apiData.averageStepGoal()) // comes out NAN
 console.log(apiData.getUserbyID(4)) // undefined
+console.log(typeof apiData) // logs as an objects
+console.log(typeof userDataArray) // logs as an object
 
 
 console.log('sleep array', sleepDataArray) // also does not work
