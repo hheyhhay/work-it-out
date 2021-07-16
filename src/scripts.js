@@ -46,8 +46,9 @@ function parseValues(values) {
 
 function instantiation(){
   userRepo = new UserRepository(userDataArray);
-  user = new User(userRepo);
-
+  user = new User(userRepo.users[0]);
+  console.log(userRepo.users[0])
+  console.log(user.returnFirstName());
 };
 
 
