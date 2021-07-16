@@ -1,12 +1,16 @@
 class UserRepository {
   constructor(userData) {
-    this.users = userData
+    this.users = userData;
   }
 
-  getUserbyID(userID) {
-    this.users.find((user) => {
-      return user.id === userID
+  getUserByID(userID) {
+
+    let selectedUser = this.users.find((user) => {
+      if(user.id === userID) {
+        return user
+      }
     })
+    return selectedUser
   }
 
   averageStepGoal() {

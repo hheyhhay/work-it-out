@@ -2,12 +2,12 @@ const UserRepository = require('./UserRepository')
 const APIcalls = require('./apiCalls')
 
 class User {
-  constructor(userRepo) {
-    this.user = userRepo
+  constructor(userData) {
+    this.user = userData;
   }
 
-  returnFirstName(user) {
-    let firstName = user.split(' ')
+  returnFirstName() {
+    let firstName = this.user.name.split(' ')
     return firstName[0]
   }
 
