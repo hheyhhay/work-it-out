@@ -69,7 +69,10 @@ describe('User', () => {
         30
       ]
     }])
-    const user = new User(userRepo);
+
+    const user = new User(userRepo.users[0]);
     expect(user.returnFirstName('Gladys Bogisich')).to.equal('Gladys')
   })
+
+
 });
