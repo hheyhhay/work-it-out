@@ -2,6 +2,7 @@
 import './css/styles.css';
 // import {userData} from './data/users'; // won't need b/c its
 import UserRepository from './UserRepository';
+import User from './User';
 import {userData, sleepData, activityData, hydrationData} from './apiCalls';
 
 //🌍  Global Variables 🌍 ///
@@ -11,7 +12,11 @@ let userDataArray;
 let sleepDataArray;
 let activityDataArray;
 let hydrationDataArray;
-let apiData;
+
+let userRepo;
+let user;
+
+
 
 //👂🏽 Event Listeners 👂🏽
 window.addEventListener('load', fetchData) // should stay here, don't forget annoymous functin
@@ -28,14 +33,22 @@ function fetchData() { // this function should be in apiCalls apiCalls.userData(
 
 function parseValues(values) {
 
+
   userDataArray = values[0].userData
   sleepDataArray = values[1].sleepData;
   activityDataArray = values[2].activityData
   hydrationDataArray = values[3].hydrationData
 
   instantiation();
+  console.log(userRepo);
+  console.log(user)
 }
 
 function instantiation(){
-  apiData = new UserRepository(userDataArray);
+  userRepo = new UserRepository(userDataArray);
+  user = new User(userRepo);
+
 };
+
+
+/// All DOM Minipulation here -> move to seprate file
