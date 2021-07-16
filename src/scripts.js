@@ -16,7 +16,8 @@ let hydrationDataArray;
 let userRepo;
 let user;
 
-
+let bodySection = document.getElementById("body");
+let greeting = document.getElementById('greeting')
 
 //👂🏽 Event Listeners 👂🏽
 window.addEventListener('load', fetchData) // should stay here, don't forget annoymous functin
@@ -34,22 +35,31 @@ function fetchData() { // this function should be in apiCalls apiCalls.userData(
 function parseValues(values) {
 
 
-  userDataArray = values[0].userData
+  userDataArray = values[0].userData;
   sleepDataArray = values[1].sleepData;
-  activityDataArray = values[2].activityData
-  hydrationDataArray = values[3].hydrationData
-
+  activityDataArray = values[2].activityData;
+  hydrationDataArray = values[3].hydrationData;
+  console.log(sleepDataArray)
   instantiation();
+  renderUser();
+
   console.log(userRepo);
   console.log(user)
 }
 
 function instantiation(){
+  let i = Math.floor(Math.random()*50); // i is index. // check that its 0 - 49
   userRepo = new UserRepository(userDataArray);
-  user = new User(userRepo.users[0]);
-  console.log(userRepo.users[0])
-  console.log(user.returnFirstName());
+  user = new User(userRepo.users[i]);
+  console.log(user.returnFirstName())
+  console.log(userRepo.averageStepGoal())
+  console.log(userRepo.getUserByID(5))
 };
 
 
+
 /// All DOM Minipulation here -> move to seprate file
+function renderUser() {
+let greetingHTML = `<h1 id = "greeting" > hello, ${user.returnFirstName()} </h1>`
+greeting.innerHTML = greetingHTML;
+}
