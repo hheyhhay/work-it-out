@@ -9,7 +9,7 @@ describe('User', () => {
     expect(User).to.be.a('function')
   });
 
-  it('should be an instance of User', () => {
+  it('should take in only one user as an arguement', () => {
     const userRepo = new UserRepository([{
       "id": 6,
       "name": "Gladys Bogisich",
@@ -37,9 +37,11 @@ describe('User', () => {
         30
       ]
     }])
-    const user = new User(userRepo);
-    expect(user).to.be.an.instanceOf(User)
-  });
+    const user = new User(userRepo.users[0]);
+    console.log(user)
+    expect(user).to.be.an.Object()
+  }
+)
 
   it('should return a users first name only', () => {
     const userRepo = new UserRepository([{
@@ -69,7 +71,10 @@ describe('User', () => {
         30
       ]
     }])
-    const user = new User(userRepo);
-    expect(user.returnFirstName('Gladys Bogisich')).to.equal('Gladys')
+
+    const user = new User(userRepo.users[0]);
+    expect(user.returnFirstName()).to.equal('Gladys')
   })
+
+
 });

@@ -1,61 +1,65 @@
 //🏎 Imports🏎
 import './css/styles.css';
-import {userData} from './data/users'; // won't need b/c its
+// import {userData} from './data/users'; // won't need b/c its
 import UserRepository from './UserRepository';
-import {getData, sleepData, activityData, hydrationData} from './apiCalls';
+import User from './User';
+import {userData, sleepData, activityData, hydrationData} from './apiCalls';
+
+//🌍  Global Variables 🌍 ///
+
+//I don't think these need to be global
+let userDataArray;
+let sleepDataArray;
+let activityDataArray;
+let hydrationDataArray;
+
+let userRepo;
+let user;
+
+let bodySection = document.getElementById("body");
+let greeting = document.getElementById('greeting')
 
 //👂🏽 Event Listeners 👂🏽
-window.addEventListener('load', fetchData) // should stay here
+window.addEventListener('load', fetchData) // should stay here, don't forget annoymous functin
 
-//🌍  Global Variables 🌍
-let userDataArray = [];
-let sleepDataArray = [];
-let activityDataArray = [];
-let hydrationDataArray = [];
+
 
 
 
 //✨ Functions ✨
-function fetchData() {
-  Promise.all([getData(), sleepData(), activityData(), hydrationData()]).then((values) =>
+function fetchData() { // this function should be in apiCalls apiCalls.userData().then((promise) => store user data, insantiate userRepo, then instantiate newUser)
+  Promise.all([userData(), sleepData(), activityData(), hydrationData()]).then((values) =>
     parseValues(values))
 };
 
 function parseValues(values) {
-  values[0].userData.forEach((value, i) => {
-    return userDataArray.push(value[i])
-// Do we need to invoke .parse() to achually parse?
-/*Hayley's notes: I beleive this is return an empty array with some how the objects
-outside of it? Each value console is the right thing, but it for some reason isn't going into
-the array? */
 
-    //this is an array of all users
-  })
-  values[1].sleepData.forEach((value) => {
-    sleepDataArray.push(value)
-    //an array of all users sleep data marked by their indiivual ids
-  })
-  values[2].activityData.forEach((value) => {
-    activityDataArray.push(value)
-  })
-  values[3].hydrationData.forEach((value) => {
-    hydrationDataArray.push(value)
-  })
+
+  userDataArray = values[0].userData;
+  sleepDataArray = values[1].sleepData;
+  activityDataArray = values[2].activityData;
+  hydrationDataArray = values[3].hydrationData;
+  console.log(sleepDataArray)
+  instantiation();
+  renderUser();
+
+  console.log(userRepo);
+  console.log(user)
 }
 
+function instantiation(){
+  let i = Math.floor(Math.random()*50); // i is index. // check that its 0 - 49
+  userRepo = new UserRepository(userDataArray);
+  user = new User(userRepo.users[i]);
+  console.log(user.returnFirstName())
+  console.log(userRepo.averageStepGoal())
+  console.log(userRepo.getUserByID(5))
+};
 
 
-console.log(userDataArray)
 
-let apiData = new UserRepository(userDataArray)
-// instantiation of UserRepositiory
-console.log(apiData.averageStepGoal()) // comes out NAN
-console.log(apiData.getUserbyID(4)) // undefined
-console.log(typeof apiData) // logs as an objects
-console.log(typeof userDataArray) // logs as an object
-
-
-console.log('sleep array', sleepDataArray) // also does not work
-
-
-// console.log('hi')
+/// All DOM Minipulation here -> move to seprate file
+function renderUser() {
+let greetingHTML = `<h1 id = "greeting" > hello, ${user.returnFirstName()} </h1>`
+greeting.innerHTML = greetingHTML;
+}
