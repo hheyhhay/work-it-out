@@ -1,3 +1,5 @@
+var dayjs = require('dayjs');
+
 class Hydration {
   constructor(hydrationData) {
     this.hydroData = hydrationData;
@@ -26,17 +28,27 @@ class Hydration {
     };
 
     weeklyWaterTotal(date, userID) {
-      // the date, and the 6 previous dates, stored in an... aray of objects?
-      // key of date value of amount of waterByDate
-      // I believe use map since we are returning an array of the same amount,
+      let sevenDays = [];
+      let i = 0;
 
-      let foundUser = this.hydroData.filter((user) => user.userID === userID).map((user) => {
-        let newObj = {};
-        newObj['date'] = user.date;
-        newObj['numOunces'] = user.numOunces;
-        return newObj;
-      })
-      return foundUser
+      // let userWater = this.hydroData.filter((user) => user.userID === userID).find((user) => user.date === date);
+      // do not need to find user, it is already found in the conditional userID === userID
+      do {
+        i++
+        sevenDays.push(date); // needed to save current date
+        sevenDays.push((dayjs(date).add(i, 'day').format('YYYY/MM/DD')));
+
+      } while (i < 6) // changed to 6 to not have it add 7 days ontop of the current date already pushed.
+
+      let weekWaterData = this.hydroData.reduce((acc, userData, index) => {
+        // console.log(userData)
+        if (userData.userID === userID  && sevenDays.includes(userData.date)) {
+          acc.push(userData.numOunces)
+        }
+        return acc;
+      }, [])
+
+      return weekWaterData;
     }
 
 
