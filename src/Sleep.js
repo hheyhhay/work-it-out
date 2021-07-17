@@ -1,3 +1,5 @@
+var dayjs = require('dayjs')
+
 class Sleep {
   constructor(sleepData) {
     this.userSleepData = sleepData
@@ -33,9 +35,20 @@ class Sleep {
     const userSleep = this.userSleepData.filter((user) => user.userID === id)
     .find((user) => user.date === date);
 
-    console.log(userSleep)
+    let sevenDaysData = [];
+    let i = 0;
+
+    do {
+      i = i + 1;
+      sevenDaysData.push((dayjs(userSleep.date).add(i, 'day').format('YYYY/MM/DD')))
+   } while (i < 6);
+
+const shit = sevenDaysData.find((day) => )
 
   }
+
+
+
 
 }
 
