@@ -4,7 +4,6 @@ class UserRepository {
   }
 
   getUserByID(userID) {
-
     let selectedUser = this.users.find((user) => {
       if(user.id === userID) {
         return user
