@@ -1,4 +1,9 @@
 //🏎 Imports🏎
+//---for day.js npm package do not delete---
+var dayjs = require('dayjs')
+//import dayjs from 'dayjs' // ES 2015
+dayjs().format()
+//-----
 import './css/styles.css';
 // import {userData} from './data/users'; // won't need b/c its
 import UserRepository from './UserRepository';
@@ -21,7 +26,6 @@ let greeting = document.getElementById('greeting')
 
 //👂🏽 Event Listeners 👂🏽
 window.addEventListener('load', fetchData) // should stay here, don't forget annoymous functin
-
 
 
 
