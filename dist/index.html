@@ -2,16 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');</style>
   <title>Work it out</title>
 </head>
-  <body id = "body">
-    <div class="quarter">
-      <h1 id = "greeting" > hello, Gladys </h1>
+  <body id="body">
+
+    <div class="image"> image here</div>
+
+    <h1 id="greeting" > hello, Gladys </h1>
+
+    <div class="user-personal-stats">
+      <span class="personal-info"> personal info here</span>
+      <div class="more-details">
+        <span class="hydration"> hydration details here</span>
+        <span class="sleep"> sleep details here</>
+      </div>
     </div>
-    <h2>You've got this: </h2>
+
+    <div class = "friend-stats"> friend stats generates depending on how many friends they have example html:
+      <!-- <div class = "friendStats"> info goes here </div>  -->
+    </div>
+
+
+<!--
     <div class="personal-info">
-      <section class="rectangle">
+      <section class="water-info">
         <div class="circle water">
           <img src="https://img.icons8.com/ios/50/000000/splash.png" />
         </div>
@@ -30,7 +46,7 @@
         </div>
         <h3> You are 10 steps away from your goal </h3>
       </section>
-    </div>
+    </div> -->
 
 <!-- Do not include the scripts.js file here - it is done automatically by the webpack server -->
     <script src="bundle.js"></script>
