@@ -39,13 +39,31 @@ function parseValues(values) {
   sleepDataArray = values[1].sleepData;
   activityDataArray = values[2].activityData;
   hydrationDataArray = values[3].hydrationData;
-  console.log(sleepDataArray)
+
+  // let dayJS = dayjs('2018-08-08');
+  // console.log(dayJS)
   instantiation();
   renderUser();
-
+  // console.log('sleep', findUserData(sleepDataArray, 2));
+  console.log('hydration', findUserData(hydrationDataArray, 40))
+  console.log('sleep', findUserData(sleepDataArray, 40)
+  console.log('user', findUserData(userDataArray, 40)
+  ))
   console.log(userRepo);
   console.log(user)
 }
+
+function findUserData(array, userNumber) {
+  let dataArray = [];
+  const foundUser = array.filter((user) => {
+    if( user.userID === userNumber ) {
+      dataArray.push(user)
+    }
+  })
+  return dataArray
+}
+
+
 
 function instantiation(){
   let i = Math.floor(Math.random()*50); // i is index. // check that its 0 - 49
