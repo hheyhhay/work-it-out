@@ -51,8 +51,7 @@ function parseValues(values) {
   // console.log('sleep', findUserData(sleepDataArray, 2));
   console.log('hydration', findUserData(hydrationDataArray, 40))
   console.log('sleep', findUserData(sleepDataArray, 40)
-  console.log('user', findUserData(userDataArray, 40)
-  ))
+  console.log('user', findUserData(userDataArray, 40))
   console.log(userRepo);
   console.log(user)
 }
