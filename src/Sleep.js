@@ -33,8 +33,6 @@ class Sleep {
 
   findSleepWeek(id, date) {
     //this one will return hoursSlept, hopefully
-    const userSleep = this.userSleepData.filter((user) => user.userID === id)
-    .find((user) => user.date === date);
 
     let sevenDaysData = [];
     sevenDaysData.push(date)
@@ -42,10 +40,10 @@ class Sleep {
 
     do {
       i = i + 1;
-      sevenDaysData.push((dayjs(userSleep.date).add(i, 'day').format('YYYY/MM/DD')))
-   } while (i < 7);
+      sevenDaysData.push((dayjs(date).add(i, 'day').format('YYYY/MM/DD')))
+   } while (i < 6);
 
-
+console.log(sevenDaysData)
    let returnHoursSlept = this.userSleepData.reduce((acc, userData, index) => {
      if (userData.userID === id && sevenDaysData.includes(userData.date)) {
        acc.push(userData.hoursSlept)
@@ -77,7 +75,7 @@ class Sleep {
        return returnSleepQuality
     }
 
-    
+
 
 
 
