@@ -80,6 +80,7 @@ describe('Sleep', () => {
   });
 
 
+
 //7 days of data
   it('should return hours slept over the course of a given week (7 Days)', () => {
     const newSleepData = new Sleep([
@@ -95,8 +96,6 @@ describe('Sleep', () => {
     {"userID":2,"date":"2019/06/21","hoursSlept":8.2,"sleepQuality":2.4},
     {"userID":1,"date":"2019/06/22","hoursSlept":5.5,"sleepQuality":1.4},
     {"userID":2,"date":"2019/06/22","hoursSlept":8.2,"sleepQuality":2.4},
-    {"userID":1,"date":"2019/06/23","hoursSlept":5.5,"sleepQuality":1.4},
-    {"userID":2,"date":"2019/06/23","hoursSlept":8.2,"sleepQuality":2.4},
     {"userID":1,"date":"2019/06/23","hoursSlept":5.5,"sleepQuality":1.4},
     {"userID":2,"date":"2019/06/23","hoursSlept":8.2,"sleepQuality":2.4},
 
@@ -122,8 +121,7 @@ describe('Sleep', () => {
     {"userID":2,"date":"2019/06/23","hoursSlept":8.2,"sleepQuality":2.4}
   ]);
   expect(newSleepData.findSleepQualityWeek(1, "2019/06/17")).to.deep.equal([3.2, 3.1, 2.6, 4.1, 1.4, 1.4, 1.4])
+  
   });
-
-
 
 });
