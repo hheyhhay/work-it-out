@@ -22,9 +22,7 @@ class Hydration {
   }
 
     waterByDate(date, userID) {
-
       let foundUser = this.hydroData.filter((user) => user.userID === userID ).find((user) => user.date === date)
-
       return foundUser.numOunces;
     };
 

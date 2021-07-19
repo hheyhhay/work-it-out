@@ -6,9 +6,10 @@ dayjs().format()
 //-----
 import './css/styles.css';
 // import {userData} from './data/users'; // won't need b/c its
-import UserRepository from './UserRepository';
-import User from './User';
 import Hydration from './Hydration';
+import Sleep from './Sleep';
+import User from './User';
+import UserRepository from './UserRepository';
 import {userData, sleepData, activityData, hydrationData} from './apiCalls';
 
 //🌍  Global Variables 🌍 ///
@@ -21,6 +22,9 @@ let hydrationDataArray;
 
 let userRepo;
 let user;
+let hydration;
+let sleep
+let startDate
 
 let bodySection = document.getElementById('body');
 let greeting = document.getElementById('greeting');
@@ -29,7 +33,7 @@ let address = document.getElementById('address');
 let email = document.getElementById('email');
 let stepGoals = document.getElementById('stepGoals');
 let waterStats = document.getElementById('waterStats')
-
+let sleepStats = document.getElementById('sleepStats')
 //👂🏽 Event Listeners 👂🏽
 window.addEventListener('load', fetchData) // should stay here, don't forget annoymous functin
 
@@ -56,6 +60,7 @@ function parseValues(values) {
   showEmail();
   showStepGoals();
   showWaterConsumed()
+  showSleep()
   console.log(userRepo)
   console.log(user)
 }
@@ -64,11 +69,20 @@ function instantiation(){
   let i = Math.floor(Math.random()*50); // i is index. // check that its 0 - 49
   userRepo = new UserRepository(userDataArray);
   user = new User(userRepo.users[i]);
+  hydration = new Hydration(hydrationDataArray);
+  sleep = new Sleep(sleepDataArray)
+  startDate = randomDate(new Date(2019, 6, 15), new Date(2020, 01, 2019))
+
   console.log(user.returnFirstName())
   console.log(userRepo.averageStepGoal())
   console.log(userRepo.getUserByID(5))
   console.log(user)
 };
+
+
+function randomDate(start, end) {
+  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
+}
 
 /// All DOM Minipulation here -> move to seprate file
 function renderUser() {
@@ -94,5 +108,9 @@ function showStepGoals() {
 }
 
 function showWaterConsumed() {
-  waterStats.innerHTML = `Your Daily Water Consumption: ${hydration.averageWater(user.user.id)}`
+  waterStats.innerHTML = `Your Daily Water Consumption: ${hydration.waterByDate(startDate, user.user.id)}`
+}
+
+function showSleep() {
+  sleepStats.innerHTML = `Your Daily Sleep: ${sleep.averageHoursOfSleep(user.user.id)}`
 }
