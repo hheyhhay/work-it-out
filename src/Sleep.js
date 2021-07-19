@@ -21,7 +21,6 @@ class Sleep {
 
   findSleepDay(id, date) {
     const userSleep = this.userSleepData.filter((user) => user.userID === id)
-
     .find((user) => user.date === date);
     return userSleep.hoursSlept
   }
@@ -33,7 +32,6 @@ class Sleep {
   }
 
   findSleepWeek(id, date) {
-    //this one will return hoursSlept, hopefully
     let sevenDaysData = [];
     sevenDaysData.push(date)
     let i = 0;
@@ -85,9 +83,6 @@ class Sleep {
     }, 0)/userSleepData.length
     return Number(average).toFixed(1)
   }
-
 }
-
-
 
 module.exports = Sleep;
