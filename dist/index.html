@@ -24,10 +24,10 @@
 
   <div class="user-personal-stats">
     <div class="personal-info">
-      <h2 class="name">Erick Schaden</h2>
+      <h2 class="name" id="name">`${name}`</h2>
 
-      <li class="address">514 Mayert Walk, Jordaneside SC 55023-6523</li>
-      <li class="email">Vanessa_Gerhold@gmail.com</li>
+      <li class="address" id="address">address</li>
+      <li class="email" id="email">Vanessa_Gerhold@gmail.com</li>
 
     </div>
     <div class="stats text">
@@ -37,7 +37,7 @@
             <img src="https://img.icons8.com/ios/50/000000/splash.png" />
           </div>
         </div>
-        <h3 class="stat-text"> Your water consumption is: 30% </h3>
+        <h3 class="stat-text" id="waterStats"> Your water consumption is: 30% </h3>
       </section>
       <section class="rectangle">
         <div class="circle-container">
@@ -53,7 +53,7 @@
             <img src="https://img.icons8.com/wired/64/000000/wind.png" />
           </div>
         </div>
-        <h3 class="stat-text"> You are 10 steps away from your goal </h3>
+        <h3 class="stat-text" id="stepGoals"> You are 10 steps away from your goal </h3>
       </section>
     </div>
     <div class="graph">
@@ -92,7 +92,7 @@
         });
       </script>
     </div>
-
+</div>
 
     <!-- Do not include the scripts.js file here - it is done automatically by the webpack server -->
     <script src="bundle.js"></script>
