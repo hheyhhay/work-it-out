@@ -71,8 +71,7 @@ function instantiation(){
   user = new User(userRepo.users[i]);
   hydration = new Hydration(hydrationDataArray);
   sleep = new Sleep(sleepDataArray)
-  startDate = randomDate(new Date(2019, 6, 15), new Date(2020, 01, 2019))
-
+//<------need a function to generate a random date-------->
   console.log(user.returnFirstName())
   console.log(userRepo.averageStepGoal())
   console.log(userRepo.getUserByID(5))
@@ -80,9 +79,7 @@ function instantiation(){
 };
 
 
-function randomDate(start, end) {
-  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
-}
+
 
 /// All DOM Minipulation here -> move to seprate file
 function renderUser() {
@@ -108,9 +105,13 @@ function showStepGoals() {
 }
 
 function showWaterConsumed() {
-  waterStats.innerHTML = `Your Daily Water Consumption: ${hydration.waterByDate(startDate, user.user.id)}`
+  waterStats.innerHTML = `Your Daily Water Consumption: ${hydration.waterByDate("2019/07/30", user.user.id)} <br>
+  Your Weekly Water Consumption: ${hydration.weeklyWaterTotal("2019/07/30", user.user.id)}`
 }
 
 function showSleep() {
-  sleepStats.innerHTML = `Your Daily Sleep: ${sleep.averageHoursOfSleep(user.user.id)}`
+  sleepStats.innerHTML = `Your Daily Sleep: ${sleep.findSleepDay(user.user.id, "2019/07/30")} <br>
+  Your Weekly Sleep: ${sleep.findSleepWeek(user.user.id, "2019/07/30")} <br>
+  Your Average Sleep ${sleep.}` 
+
 }
