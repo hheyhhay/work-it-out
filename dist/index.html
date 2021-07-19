@@ -1,56 +1,101 @@
 <!DOCTYPE html>
+
 <html>
+
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');</style>
-  <style>@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Pacifico&display=swap');</style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=Pacifico&display=swap');
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <title>Work it out</title>
 </head>
-  <body id="body">
 
-    <div class="image"> image here</div>
+<body id="body">
 
-    <h1 id="greeting" > hello, Gladys </h1>
+  <div class="image"> image here</div>
 
-    <div class="user-personal-stats">
-      <div class="personal-info">
-        <h2 class="name">Erick Schaden</h2>
+  <h1 id="greeting"> hello, Gladys </h1>
 
-          <li class="address">514 Mayert Walk, Jordaneside SC 55023-6523</li>
-          <li class="email">Vanessa_Gerhold@gmail.com</li>
+  <div class="user-personal-stats">
+    <div class="personal-info">
+      <h2 class="name">Erick Schaden</h2>
 
-      </div>
-      <div class="stats text">
-        <section class="rectangle">
-          <div class = "circle-container">
+      <li class="address">514 Mayert Walk, Jordaneside SC 55023-6523</li>
+      <li class="email">Vanessa_Gerhold@gmail.com</li>
+
+    </div>
+    <div class="stats text">
+      <section class="rectangle">
+        <div class="circle-container">
           <div class="circle water">
             <img src="https://img.icons8.com/ios/50/000000/splash.png" />
           </div>
         </div>
-          <h3 class = "stat-text"> Your water consumption is: 30% </h3>
-        </section>
-        <section class="rectangle">
-          <div class = "circle-container">
+        <h3 class="stat-text"> Your water consumption is: 30% </h3>
+      </section>
+      <section class="rectangle">
+        <div class="circle-container">
           <div class="circle moon">
             <img src="https://img.icons8.com/dotty/80/000000/crescent-moon.png" />
           </div>
         </div>
-          <h3 class = "stat-text"> You slept 5.6 hours </h3>
-        </section>
-        <section class="rectangle">
-          <div class = "circle-container">
+        <h3 class="stat-text"> You slept 5.6 hours </h3>
+      </section>
+      <section class="rectangle">
+        <div class="circle-container">
           <div class="circle activity">
             <img src="https://img.icons8.com/wired/64/000000/wind.png" />
           </div>
         </div>
-          <h3 class = "stat-text"> You are 10 steps away from your goal </h3>
-        </section>
-      </div>
-      <div class="graph"></div>
+        <h3 class="stat-text"> You are 10 steps away from your goal </h3>
+      </section>
+    </div>
+    <div class="graph">
+      <div class='container'><canvas id="myChart" width="400" height="400"></canvas></div>
+      <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['2021/13/07', '2021/14/07', '2021/15/07', '2021/16/07', '2021/17/07', '2021/18/07', 'today'],
+            datasets: [{
+              label: 'Hydration',
+              data: [12, 19, 3, 5, 2, 3, 8],
+              fill: false,
+              borderColor: [
+                'rgba(255, 99, 132, 1)',
+              ],
+              borderWidth: 1
+            }, {
+              label: 'sleep',
+              data: [2, 15, 13, 16, 2, 13, 16],
+              fill: false,
+              borderColor: [
+                'rgba(54, 162, 235, 1)',
+              ],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+    </div>
 
 
-<!-- Do not include the scripts.js file here - it is done automatically by the webpack server -->
+    <!-- Do not include the scripts.js file here - it is done automatically by the webpack server -->
     <script src="bundle.js"></script>
-  </body>
+</body>
+
 </html>
