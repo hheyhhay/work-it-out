@@ -1,3 +1,5 @@
+/*  DESIGNED FOR iPhone 6: 750 x 1334 */
+
 html {
   height: 100%;
   width: 100%;
@@ -15,7 +17,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Pacifico', cursive;
-  font-size: 14px;
+  font-size: 20px;
   text-align: left;
 
 }
@@ -41,6 +43,14 @@ h2 {
   margin-bottom: 5px;
 }
 
+li {
+  /* border: 2px solid purple; */
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  list-style: none;
+  margin-top: 5px;
+  text-align: center;
+}
+
 /* All text sizes */
 .text {
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -58,7 +68,7 @@ h2 {
   height: 70%;
 }
 .stats {
-  /* border: 2px solid white; */
+  border: 2px solid white;
   display: flex;
   justify-content: space-around;
 
@@ -95,13 +105,7 @@ h2 {
 
 
 
-li {
-  /* border: 2px solid purple; */
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  list-style: none;
-  margin-top: 5px;
-  text-align: center;
-}
+
 
 /* .hydration {
   border: 2px solid black;
@@ -114,10 +118,25 @@ li {
   background-color: white;
 } */
 
-.graph {
+.graph  {
+  display: flex;
   border: 2px solid black;
   background-color: white;
   border-radius: 25px;
+  margin: 10%;
+
+}
+
+.graph-detail {
+  font-size: 25px;
+}
+
+.container {
+  width: 70%;
+  margin-bottom: 10%;
+  /* border: 2px solid black;
+  background-color: white; */
+
 }
 .rectangle {
   display: flex;

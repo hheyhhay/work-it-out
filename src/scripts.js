@@ -1,8 +1,10 @@
 //🏎 Imports🏎
 //---for day.js npm package do not delete---
 var dayjs = require('dayjs')
+// var chartjs = require('chart.js'); 
 //import dayjs from 'dayjs' // ES 2015
 dayjs().format()
+var chart
 //-----
 import './css/styles.css';
 // import {userData} from './data/users'; // won't need b/c its
