@@ -44,14 +44,11 @@ Use https://gifcap.dev/ to make GIFs
   - [Janika Hortizuela](https://github.com/jhortizu01)
 
 ## Wins
-	- What went well!
-	- Successes
+[Janika Hortizuela](https://github.com/jhortizu01) and [Hayley Dixon](https://github.com/hheyhhay) were able to successfully:
 
-## Challenges + Improvements
-	- What was difficult & how you would like to improve on code/project
-	- Any Bugs
-	- Future Iterations
-
+	- Connect the API to our scripts.js
+  - Install and use npm's day.js and chart.js
+  - Use media queries to have a responsive layout
 
 ## Project Specs
   - The project spec & rubric can be found [here](insert project spec sheet here)
