@@ -76,14 +76,15 @@ console.log(sevenDaysData)
        return returnSleepQuality
     }
 
-  averageAllTimeHoursOfSleep(this.userSleepData){
-    const userSleep = this.userSleepData.filter((user) => user.userID === id);
-      let sum = 0;
-        userSleep.forEach((user) => {sum += user.hoursSlept});
-          return Number((sum / userSleep.length).toFixed(1));
+  averageAllTimeHoursOfSleep(userSleepData){
+    let average = userSleepData.reduce((acc, userSleepData) => {
+      acc += userSleepData.hoursSlept
+      return acc
+    }, 0)/userSleepData.length
+    return Number(average).toFixed(1)
   }
 
-  }
+}
 
 
 

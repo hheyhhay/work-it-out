@@ -100,7 +100,7 @@ function showEmail() {
 }
 
 function showStepGoals() {
-  stepGoals.innerHTML = `Your Daily Step Goal: ${user.user.dailyStepGoal} <br><br>
+  stepGoals.innerHTML = `Your Daily Step Goal: ${user.user.dailyStepGoal} <br>
   All Users Step Goals: ${userRepo.averageStepGoal()}`
 }
 
@@ -112,6 +112,5 @@ function showWaterConsumed() {
 function showSleep() {
   sleepStats.innerHTML = `Your Daily Sleep: ${sleep.findSleepDay(user.user.id, "2019/07/30")} <br>
   Your Weekly Sleep: ${sleep.findSleepWeek(user.user.id, "2019/07/30")} <br>
-  Your Average Sleep ${sleep.}` 
-
+  All Time User Average of Sleep: ${sleep.averageAllTimeHoursOfSleep(sleepDataArray)}`
 }
