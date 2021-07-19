@@ -16,16 +16,16 @@ Mod 2 Work It Out
   - [Project Specs](#project-specs)
 
 ## Abstract
-	Overview of project + goals
+	In this project data was given from an activity tracker  from many users over many days. The  
 
 ## Technologies
   - Javascript
-  - eslint
-  - node
-  - Atom
-	- WebPack
-	- API
-
+  - HTML
+  - CSS
+  - Mocha
+  - Chai
+  - dayjs
+  - chartjs
 
 ## Code Architecture
 
