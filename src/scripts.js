@@ -8,6 +8,7 @@ import './css/styles.css';
 // import {userData} from './data/users'; // won't need b/c its
 import UserRepository from './UserRepository';
 import User from './User';
+import Hydration from './Hydration';
 import {userData, sleepData, activityData, hydrationData} from './apiCalls';
 
 //🌍  Global Variables 🌍 ///
@@ -54,6 +55,7 @@ function parseValues(values) {
   showAddress();
   showEmail();
   showStepGoals();
+  showWaterConsumed()
   console.log(userRepo)
   console.log(user)
 }
@@ -92,5 +94,5 @@ function showStepGoals() {
 }
 
 function showWaterConsumed() {
-  
+  waterStats.innerHTML = `Your Daily Water Consumption: ${hydration.averageWater(user.user.id)}`
 }
