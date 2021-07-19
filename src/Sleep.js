@@ -65,13 +65,13 @@ class Sleep {
     let i = 0;
 
     do {
-      i = i + 1;
+      i++;
       sevenDaysData.push((dayjs(userSleep.date).add(i, 'day').format('YYYY/MM/DD')))
    } while (i < 7);
 
      let returnSleepQuality = this.userSleepData.reduce((acc, userData, index) => {
        if (userData.userID === id && sevenDaysData.includes(userData.date)) {
-         acc.push(userData.sleepQuality)
+         acc.unshift(userData.sleepQuality)
          }
          return acc
        }, [])
