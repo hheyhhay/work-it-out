@@ -51,4 +51,4 @@ Use https://gifcap.dev/ to make GIFs
   - Use media queries to have a responsive layout
 
 ## Project Specs
-  - The project spec & rubric can be found [here](insert project spec sheet here)
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/fitlit.html)
