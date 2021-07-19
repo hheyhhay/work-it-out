@@ -34,6 +34,7 @@ let email = document.getElementById('email');
 let stepGoals = document.getElementById('stepGoals');
 let waterStats = document.getElementById('waterStats')
 let sleepStats = document.getElementById('sleepStats')
+let friends = document.getElementById('friends')
 //👂🏽 Event Listeners 👂🏽
 window.addEventListener('load', fetchData) // should stay here, don't forget annoymous functin
 
@@ -79,8 +80,6 @@ function instantiation(){
 };
 
 
-
-
 /// All DOM Minipulation here -> move to seprate file
 function renderUser() {
 let greetingHTML = `Hello, ${user.returnFirstName()}!`
@@ -105,13 +104,11 @@ function showStepGoals() {
 }
 
 function showWaterConsumed() {
-  waterStats.innerHTML = `Your Daily Water Consumption: ${hydration.waterByDate("2019/07/30", user.user.id)} <br>
-  Your Weekly Water Consumption: ${hydration.weeklyWaterTotal("2019/07/30", user.user.id)}`
+  waterStats.innerHTML = `Your Daily Water Consumption: ${hydration.waterByDate("2019/07/30", user.user.id)}`
 }
 
 function showSleep() {
   sleepStats.innerHTML = `Your Daily Sleep: ${sleep.findSleepDay(user.user.id, "2019/07/30")} <br>
-  Your Weekly Sleep: ${sleep.findSleepWeek(user.user.id, "2019/07/30")} <br>
   Average Quality of Sleep: ${sleep.averageQualityOfSleep(user.user.id)} <br>
-  All Time Average Hours of Sleep: ${sleep.averageHoursOfSleep(user.user.id)}`
+  Average Hours of Sleep: ${sleep.averageHoursOfSleep(user.user.id)}`
 }
