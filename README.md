@@ -30,18 +30,13 @@ In this project data was given from an activity tracker  from many users over ma
 - dayjs
 - chartjs
 
-
-## Code Architecture
-
-
-
 ## Illustrations
 
 Use https://gifcap.dev/ to make GIFs
 
 #Contributors
   - [Hayley Dixon](https://github.com/hheyhhay)
-
+  - [Janika Hortizuela](https://github.com/jhortizu01)
 
 ## Wins
 	- What went well!

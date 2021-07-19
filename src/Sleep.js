@@ -39,11 +39,9 @@ class Sleep {
     let i = 0;
 
     do {
-<<<<<<< HEAD
-      i = i + 1;
-=======
+
       i++;
->>>>>>> main
+
       sevenDaysData.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')))
    } while (i < 6);
 
