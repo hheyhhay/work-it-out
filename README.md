@@ -16,10 +16,15 @@ Mod 2 Work It Out
   - [Project Specs](#project-specs)
 
 ## Abstract
-In this project data was given from an activity tracker  from many users over many days. The  
+In this project data was given from an activity tracker from many users over many days. The goal of the project is to display user info on a dashboard.  
 
 ## Install + Setup
-- Install instructions, how to access the website and how to use the website
+Access the website [here](diployed website)
+
+Instructions for installation:
+1. Clone down repo to your local machine
+2. Run `npm install` in your terminal
+3. Run `npm start` in your terminal
 
 ## Technologies
 - Javascript
