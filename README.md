@@ -1,7 +1,7 @@
 
 
 # Title
-Mod + Project Name
+Mod 2 Work It Out
 
 
 ## Table of Contents
@@ -42,7 +42,7 @@ Use https://gifcap.dev/ to make GIFs
 
 ## Contributors
   - [Hayley Dixon](https://github.com/hheyhhay)
-  
+
 
 ## Wins
 	- What went well!
