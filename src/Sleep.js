@@ -64,7 +64,7 @@ class Sleep {
 
     do {
       i++;
-      sevenDaysData.push((dayjs(userSleep.date).add(i, 'day').format('YYYY/MM/DD')))
+      sevenDaysData.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')))
    } while (i < 7);
 
      let returnSleepQuality = this.userSleepData.reduce((acc, userData, index) => {
@@ -76,13 +76,24 @@ class Sleep {
        return returnSleepQuality
     }
 
-  averageAllTimeHoursOfSleep(userSleepData){
-    let average = userSleepData.reduce((acc, userSleepData) => {
-      acc += userSleepData.hoursSlept
-      return acc
-    }, 0)/userSleepData.length
-    return Number(average).toFixed(1)
-  }
+  averageAllTimeHoursOfSleep(){
+
+    let sum = 0;
+    const userSleep = this.userSleepData.forEach((user) => {sum += user.hoursSlept});
+
+        return (Number((sum / this.userSleepData.length).toFixed(1)))
+    }
+
+
+//     let average = this.userSleepData.reduce((acc, user) => {
+//       acc += this.userSleepData[user].hoursSlept
+//       console.log(this.userSleepData[user].hoursSlept)
+//       return acc
+//
+//     }, 0)/this.userSleepData.length
+// console.log(average)
+//     return average
+  //}
 }
 
 module.exports = Sleep;
