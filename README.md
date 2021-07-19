@@ -16,31 +16,30 @@ Mod 2 Work It Out
   - [Project Specs](#project-specs)
 
 ## Abstract
-	In this project data was given from an activity tracker  from many users over many days. The  
+In this project data was given from an activity tracker  from many users over many days. The  
+
+## Install + Setup
+- Install instructions, how to access the website and how to use the website
 
 ## Technologies
-  - Javascript
-  - HTML
-  - CSS
-  - Mocha
-  - Chai
-  - dayjs
-  - chartjs
+- Javascript
+- HTML
+- CSS
+- Mocha
+- Chai
+- dayjs
+- chartjs
+
 
 ## Code Architecture
+
 
 
 ## Illustrations
 
 Use https://gifcap.dev/ to make GIFs
 
-
-## Install + Setup
-	- Install instructions, how to access the website and how to use the website
-
-
-
-## Contributors
+#Contributors
   - [Hayley Dixon](https://github.com/hheyhhay)
 
 

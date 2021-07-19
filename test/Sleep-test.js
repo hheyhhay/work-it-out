@@ -100,7 +100,9 @@ describe('Sleep', () => {
     {"userID":2,"date":"2019/06/23","hoursSlept":8.2,"sleepQuality":2.4},
 
   ]);
-  expect(newSleepData.findSleepWeek(1, "2019/06/18")).to.deep.equal([10.4, 9.8, 5.2, 5.5, 5.5, 5.5, 5.5])
+  expect(newSleepData.findSleepWeek(1, "2019/06/23")).to.deep.equal([5.5, 5.5, 5.5, 5.5, 5.2, 9.8, 10.4])
+
+
   });
 
   it('should return sleep quality over the course of a given week (7 Days)', () => {

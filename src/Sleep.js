@@ -41,7 +41,7 @@ class Sleep {
 
     do {
       i = i + 1;
-      sevenDaysData.push((dayjs(date).add(i, 'day').format('YYYY/MM/DD')))
+      sevenDaysData.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')))
    } while (i < 6);
 
 console.log(sevenDaysData)

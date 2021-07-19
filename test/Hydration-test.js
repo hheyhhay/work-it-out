@@ -3,7 +3,7 @@ import Sleep from '../src/Sleep';
 
 const Hydration = require('../src/Hydration')
 
-describe.only('Hydration', () => {
+describe('Hydration', () => {
 
   let hydrationData;
   let hydration;
