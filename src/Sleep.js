@@ -76,7 +76,15 @@ console.log(sevenDaysData)
        return returnSleepQuality
     }
 
+  averageAllTimeHoursOfSleep(userSleepData){
+    let average = userSleepData.reduce((acc, userSleepData) => {
+      acc += userSleepData.hoursSlept
+      return acc
+    }, 0)/userSleepData.length
+    return Number(average).toFixed(1)
   }
+
+}
 
 
 

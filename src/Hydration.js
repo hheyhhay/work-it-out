@@ -4,6 +4,7 @@ class Hydration {
   constructor(hydrationData) {
     this.hydroData = hydrationData;
   }
+
   averageWater(userID){
     let foundUser = this.hydroData.filter((user) => { // could be built in as helper function?
       return user.userID === userID;
@@ -21,9 +22,7 @@ class Hydration {
   }
 
     waterByDate(date, userID) {
-
       let foundUser = this.hydroData.filter((user) => user.userID === userID ).find((user) => user.date === date)
-
       return foundUser.numOunces;
     };
 
