@@ -21,14 +21,14 @@ class Sleep {
 
   findSleepDay(id, date) {
     const userSleep = this.userSleepData.filter((user) => user.userID === id)
-    .find((user) => user.date === date);
-    return userSleep.hoursSlept
+      .find((user) => user.date === date);
+      return userSleep.hoursSlept
   }
 
   findSleepQualityDay(id, date) {
     const userSleep = this.userSleepData.filter((user) => user.userID === id)
-    .find((user) => user.date === date);
-    return userSleep.sleepQuality
+      .find((user) => user.date === date);
+        return userSleep.sleepQuality
   }
 
   findSleepWeek(id, date) {
@@ -77,23 +77,11 @@ class Sleep {
     }
 
   averageAllTimeHoursOfSleep(){
-
     let sum = 0;
-    const userSleep = this.userSleepData.forEach((user) => {sum += user.hoursSlept});
-
+      const userSleep = this.userSleepData.forEach((user) => {sum += user.hoursSlept});
         return (Number((sum / this.userSleepData.length).toFixed(1)))
-    }
+  }
 
-
-//     let average = this.userSleepData.reduce((acc, user) => {
-//       acc += this.userSleepData[user].hoursSlept
-//       console.log(this.userSleepData[user].hoursSlept)
-//       return acc
-//
-//     }, 0)/this.userSleepData.length
-// console.log(average)
-//     return average
-  //}
 }
 
 module.exports = Sleep;
