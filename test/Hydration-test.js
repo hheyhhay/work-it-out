@@ -44,7 +44,7 @@ describe('Hydration', () => {
   });
 
   it('should be able keep track of how much water is drinken each day for a week', () => {
-    expect(hydration.weeklyWaterTotal("2019/06/15", 1)).to.deep.equal([ 37, 69, 96, 61, 91, 50, 50])
+    expect(hydration.weeklyWaterTotal("2019/06/21", 1)).to.deep.equal([ 50, 50, 91, 61, 96, 69, 37])
   })
 
   it('should be able to keep track with a larger data set', () => {
@@ -72,7 +72,7 @@ describe('Hydration', () => {
 
     hydration = new Hydration(hydrationData)
 
-    expect(hydration.weeklyWaterTotal("2019/06/16", 2)).to.deep.equal([ 91, 96, 70, 76, 71,27, 58 ])
+    expect(hydration.weeklyWaterTotal("2019/06/23", 2)).to.deep.equal([ 44, 58, 27, 71, 76, 70, 96, 91])
 
   });
 
