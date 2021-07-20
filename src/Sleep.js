@@ -21,19 +21,17 @@ class Sleep {
 
   findSleepDay(id, date) {
     const userSleep = this.userSleepData.filter((user) => user.userID === id)
-
-    .find((user) => user.date === date);
-    return userSleep.hoursSlept
+      .find((user) => user.date === date);
+      return userSleep.hoursSlept
   }
 
   findSleepQualityDay(id, date) {
     const userSleep = this.userSleepData.filter((user) => user.userID === id)
     .find((user) => user.date === date);
-    return userSleep.sleepQuality
+        return userSleep.sleepQuality
   }
 
   findSleepWeek(id, date) {
-    //this one will return hoursSlept, hopefully
     let sevenDaysData = [];
     sevenDaysData.push(date)
     let i = 0;
@@ -43,49 +41,44 @@ class Sleep {
       sevenDaysData.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')))
    } while (i < 6);
 
-
-   let returnHoursSlept = this.userSleepData.reduce((acc, userData, index) => {
+   let returnSleepQuality = this.userSleepData.reduce((acc, userData, index) => {
      if (userData.userID === id && sevenDaysData.includes(userData.date)) {
        acc.unshift(userData.hoursSlept)
-       }
+     } else if (userData.userID === id && !sevenDaysData.includes(userData.date)) {
+       acc.unshift('null')
+     }
        return acc
      }, [])
-     return returnHoursSlept
-
+     return returnSleepQuality
   }
 
   findSleepQualityWeek(id, date) {
-    const userSleep = this.userSleepData.filter((user) => user.userID === id)
-    .find((user) => user.date === date);
-
     let sevenDaysData = [];
     sevenDaysData.push(date)
     let i = 0;
 
     do {
-      i = i + 1;
-      sevenDaysData.push((dayjs(userSleep.date).add(i, 'day').format('YYYY/MM/DD')))
+      i++;
+      sevenDaysData.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')))
    } while (i < 7);
 
      let returnSleepQuality = this.userSleepData.reduce((acc, userData, index) => {
        if (userData.userID === id && sevenDaysData.includes(userData.date)) {
-         acc.push(userData.sleepQuality)
-         }
+         acc.unshift(userData.sleepQuality)
+       } else if (userData.userID === id && !sevenDaysData.includes(userData.date)) {
+         acc.unshift('null')
+       }
          return acc
        }, [])
        return returnSleepQuality
     }
 
-  averageAllTimeHoursOfSleep(userSleepData){
-    let average = userSleepData.reduce((acc, userSleepData) => {
-      acc += userSleepData.hoursSlept
-      return acc
-    }, 0)/userSleepData.length
-    return Number(average).toFixed(1)
+  averageAllTimeHoursOfSleep(){
+    let sum = 0;
+      const userSleep = this.userSleepData.forEach((user) => {sum += user.hoursSlept});
+        return (Number((sum / this.userSleepData.length).toFixed(1)))
   }
 
 }
-
-
 
 module.exports = Sleep;

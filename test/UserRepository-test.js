@@ -38,8 +38,8 @@ describe('User Repository', () => {
     expect(userRepo).to.be.an.instanceof(UserRepository);
   });
 
-  it.skip('should show user data by ID', () => {
-    expect(userRepo.getUserbyID(1)).to.deep.equal(userRepo[0])
+  it('should show user data by ID', () => {
+    expect(userRepo.getUserByID(1)).to.equal(1)
   })
 
   it('should show average steps amongst of all users', () => {

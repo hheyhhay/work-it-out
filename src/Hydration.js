@@ -6,10 +6,9 @@ class Hydration {
   }
 
   averageWater(userID){
-    let foundUser = this.hydroData.filter((user) => { // could be built in as helper function?
+    let foundUser = this.hydroData.filter((user) => {
       return user.userID === userID;
     })
-
 
     let averageWater = foundUser.reduce((acc, currentValue) => {
       acc = acc + currentValue.numOunces;
@@ -28,28 +27,25 @@ class Hydration {
 
     weeklyWaterTotal(date, userID) {
       let sevenDays = [];
+      sevenDays.push(date);
       let i = 0;
 
-      // let userWater = this.hydroData.filter((user) => user.userID === userID).find((user) => user.date === date);
-      // do not need to find user, it is already found in the conditional userID === userID
       do {
         i++
-        sevenDays.push(date); // needed to save current date
-        sevenDays.push((dayjs(date).add(i, 'day').format('YYYY/MM/DD')));
-
-      } while (i < 6) // changed to 6 to not have it add 7 days ontop of the current date already pushed.
+        sevenDays.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')));
+      } while (i < 6);
 
       let weekWaterData = this.hydroData.reduce((acc, userData, index) => {
-        // console.log(userData)
         if (userData.userID === userID  && sevenDays.includes(userData.date)) {
-          acc.push(userData.numOunces)
+          console.log(acc)
+          acc.unshift(userData.numOunces)
+        } else if (userData.userID === userID  && !sevenDays.includes(userData.date)) {
+          return
         }
         return acc;
       }, [])
-
       return weekWaterData;
     }
-
 
 };
 

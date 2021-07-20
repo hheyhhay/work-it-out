@@ -9,7 +9,7 @@ class UserRepository {
         return user
       }
     })
-    return selectedUser
+    return selectedUser.id
   }
 
   averageStepGoal() {
