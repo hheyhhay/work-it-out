@@ -21,10 +21,10 @@
       <li class="address" id="address">></li>
       <li class="email" id="email"></li>
     </div>
-    <form action="/action_page.php" class = "select-date">
+    <form action="http://localhost:8080/" class = "select-date">
       <label for="date">Pick your date:</label>
       <input type="date" id="date-selector" name="date" min = "2019-06-15" max = "2020-01-19">
-      <input type="submit" class="submit-button">
+      <input type="submit" class="submit-button" id="button">
     </form>
     <div class="stats text">
       <section class="rectangle">
@@ -54,7 +54,7 @@
     </div>
     <div class="graph">
       <div class='container'><canvas id="myChart"></canvas></div>
-      <script class = "graph-detail">
+      <script id = "graph-detail">
 
         let ctx = document.getElementById('myChart').getContext('2d');
         let myChart = new Chart(ctx, {
