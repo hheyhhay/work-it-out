@@ -6,17 +6,21 @@ let email = document.getElementById('email');
 let stepGoals = document.getElementById('stepGoals');
 let waterStats = document.getElementById('waterStats')
 let sleepStats = document.getElementById('sleepStats')
-let graph = document.getElementById('graph-details');
+//let graph = document.getElementById('graph-detail');
+let myChart = document.getElementById('myChart').getContext('2d');
+
 
 const renderGraph = () => {
-  graph.innerHTML = `let ctx = document.getElementById('myChart').getContext('2d');
-    let myChart = new Chart(ctx, {
+  console.log(hydration.weeklyWaterTotal("2019/07/30", user.user.id))
+  console.log(sleep.findSleepWeek(user.user.id, "2019/07/30"))
+  let displayChart = new Chart(myChart, {
       type: 'line',
       data: {
         labels: ['2021/13/07', '2021/14/07', '2021/15/07', '2021/16/07', '2021/17/07', '2021/18/07', 'today'],
         datasets: [{
           label: 'Hydration',
-          data: [2, 9, 3, 5, 2, 3, 8],
+
+          data: hydration.weeklyWaterTotal("2019/07/30", user.user.id),
           fill: false,
           borderColor: [
             'rgba(46, 155, 240, 1)',
@@ -24,7 +28,7 @@ const renderGraph = () => {
           borderWidth: 7
         }, {
           label: 'Sleep',
-          data: [2, 1, 3, 6, 2, 3, 6],
+          data: sleep.findSleepWeek(user.user.id, "2019/07/30"),
           fill: false,
           borderColor: [
             'rgba(84, 93, 186, 1)',
@@ -39,7 +43,7 @@ const renderGraph = () => {
           }
         }
       }
-    });`
+    });
 }
 
 
