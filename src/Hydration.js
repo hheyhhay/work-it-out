@@ -32,17 +32,17 @@ class Hydration {
       do {
         i++
         sevenDays.push(date);
-        sevenDays.push((dayjs(date).add(i, 'day').format('YYYY/MM/DD')));
+        sevenDays.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')));
+      } while (i < 6)
 
-      } while (i < 6) 
       let weekWaterData = this.hydroData.reduce((acc, userData, index) => {
-        // console.log(userData)
         if (userData.userID === userID  && sevenDays.includes(userData.date)) {
-          acc.push(userData.numOunces)
+          acc.unshift(userData.numOunces)
+        } else if (userData.userID === userID  && sevenDays.includes(userData.date)) {
+          acc.unshift('null')
         }
         return acc;
       }, [])
-
       return weekWaterData;
     }
 
