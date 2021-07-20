@@ -54,7 +54,7 @@ Our site in action! Designed for mobile and reformatted using media query for co
 ## Wins
 [Janika Hortizuela](https://github.com/jhortizu01) and [Hayley Dixon](https://github.com/hheyhhay) were able to successfully:
 
-	- Connect the API to our scripts.js
+  - Connect the API to our scripts.js
   - Install and use npm's day.js and chart.js
   - Use media queries to have a responsive layout
   - successfully use Webpack to connect all the files
