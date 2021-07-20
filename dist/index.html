@@ -16,20 +16,18 @@
 </head>
 
 <body id="body">
-
-  <div class="image"> image here</div>
-
-  <h1 id="greeting"> hello, Gladys </h1>
-
+  <!-- <div class="image"> image here</div> -->
+  <h1 id="greeting"></h1>
   <div class="user-personal-stats">
     <div class="personal-info">
-      <h2 class="name" id="name">`${name}`</h2>
-
-      <li class="address" id="address">address</li>
-      <li class="email" id="email">Vanessa_Gerhold@gmail.com</li>
-      <li class="friends" id="friends">list friends</li>
-
+      <li class="address" id="address">></li>
+      <li class="email" id="email"></li>
     </div>
+    <form action="/action_page.php" class = "select-date">
+      <label for="date">Pick your date:</label>
+      <input type="date" id="date-selector" name="date" min = "2019-06-15" max = "2020-01-19">
+      <input type="submit" class="submit-button">
+    </form>
     <div class="stats text">
       <section class="rectangle">
         <div class="circle-container">
@@ -37,7 +35,7 @@
             <img src="https://img.icons8.com/ios/50/000000/splash.png" />
           </div>
         </div>
-        <h3 class="stat-text" id="waterStats"> Your water consumption is: 30% </h3>
+        <h3 class="stat-text" id="waterStats"></h3>
       </section>
       <section class="rectangle">
         <div class="circle-container">
@@ -45,7 +43,7 @@
             <img src="https://img.icons8.com/dotty/80/000000/crescent-moon.png" />
           </div>
         </div>
-        <h3 class="stat-text" id="sleepStats"> You slept 5.6 hours </h3>
+        <h3 class="stat-text" id="sleepStats"></h3>
       </section>
       <section class="rectangle">
         <div class="circle-container">
@@ -53,14 +51,15 @@
             <img src="https://img.icons8.com/wired/64/000000/wind.png" />
           </div>
         </div>
-        <h3 class="stat-text" id="stepGoals"> You are 10 steps away from your goal </h3>
+        <h3 class="stat-text" id="stepGoals"></h3>
       </section>
     </div>
     <div class="graph">
       <div class='container'><canvas id="myChart"></canvas></div>
       <script class = "graph-detail">
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
+
+        let ctx = document.getElementById('myChart').getContext('2d');
+        let myChart = new Chart(ctx, {
           type: 'line',
           data: {
             labels: ['2021/13/07', '2021/14/07', '2021/15/07', '2021/16/07', '2021/17/07', '2021/18/07', 'today'],

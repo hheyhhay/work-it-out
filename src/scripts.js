@@ -1,7 +1,7 @@
 //🏎 Imports🏎
 //---for day.js npm package do not delete---
 var dayjs = require('dayjs')
-// var chartjs = require('chart.js'); 
+// var chartjs = require('chart.js');
 //import dayjs from 'dayjs' // ES 2015
 dayjs().format()
 var chart
@@ -58,7 +58,6 @@ function parseValues(values) {
   console.log(sleepDataArray)
   instantiation();
   renderUser();
-  showName(); //<<< had to put this here, could not use user or userRepo variables unless it was in here 🤷🏽‍♀️ would not work making new window event listener
   showAddress();
   showEmail();
   showStepGoals();
@@ -88,29 +87,25 @@ let greetingHTML = `Hello, ${user.returnFirstName()}!`
 greeting.innerHTML = greetingHTML;
 }
 
-function showName() {
-  name.innerHTML = `${user.user.name}`
-}
+
 
 function showAddress() {
-  address.innerHTML = `${user.user.address}`
+  address.innerHTML = `<b>address:</b> ${user.user.address}`;
 }
 
 function showEmail() {
-  email.innerHTML = `${user.user.email}`
+  email.innerHTML = `<b>email:</b> ${user.user.email}`;
 }
 
 function showStepGoals() {
-  stepGoals.innerHTML = `Your Daily Step Goal: ${user.user.dailyStepGoal} <br>
-  All Users Step Goals: ${userRepo.averageStepGoal()}`
+  stepGoals.innerHTML = `Your Daily Step Goal is ${user.user.dailyStepGoal}. Most people's Step Goal is ${userRepo.averageStepGoal()}`
 }
 
 function showWaterConsumed() {
-  waterStats.innerHTML = `Your Daily Water Consumption: ${hydration.waterByDate("2019/07/30", user.user.id)}`
+  waterStats.innerHTML = `Today, you drank ${hydration.waterByDate("2019/07/30", user.user.id)} liters`
 }
 
 function showSleep() {
-  sleepStats.innerHTML = `Your Daily Sleep: ${sleep.findSleepDay(user.user.id, "2019/07/30")} <br>
-  Average Quality of Sleep: ${sleep.averageQualityOfSleep(user.user.id)} <br>
-  Average Hours of Sleep: ${sleep.averageHoursOfSleep(user.user.id)}`
+  sleepStats.innerHTML = `Last night, you slept ${sleep.findSleepDay(user.user.id, "2019/07/30")} hours.
+  Most nights, you sleep ${sleep.averageHoursOfSleep(user.user.id)} hours with a quality of${sleep.averageQualityOfSleep(user.user.id)} out of 5.`
 }

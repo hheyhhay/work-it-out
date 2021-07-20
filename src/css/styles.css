@@ -2,152 +2,110 @@
 
 html {
   height: 100%;
-  width: 100%;
   overflow : scroll;
 }
 body {
-
-  background: rgb(238, 174, 202);
-  background: linear-gradient(to bottom, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100% );
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
-
+  background: linear-gradient(to bottom, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100% );
   height: 100%;
   width: 100%;
-  font-family: 'Pacifico', cursive;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: bold;
   font-size: 20px;
   text-align: left;
-
 }
 
-/* .image {
-  width: 100%
-  height: 100px;
-  justify-content: left;
-} */
 /*  Greeting Header */
 h1 {
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
+  font-family: 'Pacifico';
   text-align: center;
   font-size: 50px;
-  height: 20%;
+  height: 10%;
 }
 
 /* Name in info box */
-h2 {
-  /* border: 2px solid pink; */
-  padding-left: 10px;
-  padding-bottom: 0px;
-  margin-bottom: 5px;
-}
+
 
 li {
   /* border: 2px solid purple; */
   font-family: 'M PLUS Rounded 1c', sans-serif;
   list-style: none;
   margin-top: 5px;
+  padding-top:10px;
   text-align: center;
 }
 
 /* All text sizes */
-.text {
+/* .text {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   margin-top: 5px;
-}
+} */
 
 /* container for all stats and info box */
 .user-personal-stats {
-  /* border: 2px solid purple; */
+  border: 2px solid purple;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   align-content: stretch;
-  height: 70%;
-}
-.stats {
-  border: 2px solid white;
-  display: flex;
-  justify-content: space-around;
-
-
-  width: 100%;
-  height: 100%;
+  height: 90%;
 }
 
+/* Personal Information*/
 .personal-info {
   display: flex;
   border: 1px solid black;
   background-color: white;
   flex-direction: column;
   border-radius: 25px;
-  padding-bottom: 10%;
-  margin-bottom: 10%;
-  width: 75%;
-  height: 30%;
+  padding-bottom: 5%;
+
+  width: 80%;
+  height: 10%;
 }
 
-/* .quarter {
-  background: rgb(250, 199, 17);
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 100%;
-  width: 200px;
-  height: 200px;
-  position: right;
-} */
-
-
-
-
-
-
-
-
-/* .hydration {
-  border: 2px solid black;
-  background-color: white;
-  margin-bottom: 20%;
-  width: 100%;
-}
-.sleep {
-  border: 2px solid black;
-  background-color: white;
-} */
-
-.graph  {
+/*Date form*/
+.select-date {
   display: flex;
-  border: 2px solid black;
-  background-color: white;
-  border-radius: 25px;
-  margin: 10%;
-
+  justify-content: space-between;
+  border: 2px solid pink;
+  margin: 2%;
+  width: 80%;
 }
-
-.graph-detail {
-  font-size: 25px;
+.submit-button {
+  background: rgba(10, 167, 137, 1);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  border-style: none;
+  font-weight: bold;
 }
-
-.container {
-  width: 70%;
-  margin-bottom: 10%;
-  /* border: 2px solid black;
-  background-color: white; */
-
+ /* Statistic boxes */
+.stats {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .rectangle {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   border-radius: 25px;
   background: white;
   border: 1px solid black;
 
-  width: 25%;
-  height: 100%;
+  width: 80%;
+  height: 30%;
 }
 
 .circle-container {
@@ -156,7 +114,8 @@ li {
   align-items: center;
   padding-top: 10%;
   height: 40%;
-  /* border: 2px solid pink; */
+  width: 30%;
+
 }
 
 .circle {
@@ -165,20 +124,24 @@ li {
   border: 3px solid black;
   background: rgba(46, 155, 240, 1);
   border-radius: 100%;
-
   width: 75%;
   height: 100%;
 }
 
 .stat-text {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid black; */
-  padding-left: 10px;
-  padding-right: 10%;
+  padding: 15%;
+  border: 2px solid black;
+  text-align: left;
+
+  /* padding-right: 2%;
+  padding-top: 10%; */
   margin: 0px;
-  height: 60%;
+  height: 30%;
+  width: 100%;
 }
 .moon {
   background-color: rgba(84, 93, 186, 1)
@@ -187,3 +150,69 @@ li {
 .activity {
   background-color: rgba(10, 167, 137, 1);
 }
+
+/*Graph*/
+.graph  {
+  display: flex;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 25px;
+  margin: 5%;
+
+}
+
+
+.container {
+  width: 80%;
+  margin-bottom: 10%;
+  /* border: 2px solid black;
+  background-color: white; */
+
+}
+
+
+@media screen and (max-width: 768px){
+/*Should have nothing designed for mobile*/
+
+
+
+
+
+
+  }
+@media screen and (min-width: 768px){
+
+
+  .stats {
+    border: 5px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rectangle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    background: white;
+    border: 1px solid black;
+
+    width: 25%;
+    height: 100%;
+  }
+
+  .stat-text {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    padding-left: 10px;
+    padding-right: 10%;
+    margin: 0px;
+    height: 60%;
+  }
+};
