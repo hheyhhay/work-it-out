@@ -6,7 +6,7 @@ class Hydration {
   }
 
   averageWater(userID){
-    let foundUser = this.hydroData.filter((user) => { // could be built in as helper function?
+    let foundUser = this.hydroData.filter((user) => { 
       return user.userID === userID;
     })
 
