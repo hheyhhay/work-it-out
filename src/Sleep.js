@@ -45,11 +45,8 @@ class Sleep {
    } while (i < 6);
 
    let returnSleepQuality = this.userSleepData.reduce((acc, userData, index) => {
-     if (userData.userID === id && sevenDaysData.includes(userData.date)) {
+     userData.userID === id && sevenDaysData.includes(userData.date)
        acc.unshift(userData.hoursSlept)
-     } else if (userData.userID === id && !sevenDaysData.includes(userData.date)) {
-       acc.unshift(null)
-     }
        return acc
      }, [])
      return returnSleepQuality
@@ -66,15 +63,13 @@ class Sleep {
    } while (i < 7);
 
      let returnSleepQuality = this.userSleepData.reduce((acc, userData, index) => {
-       if (userData.userID === id && sevenDaysData.includes(userData.date)) {
+       userData.userID === id && sevenDaysData.includes(userData.date)
          acc.unshift(userData.sleepQuality)
-       } else if (userData.userID === id && !sevenDaysData.includes(userData.date)) {
-         acc.unshift(null)
-       }
-         return acc
+            return acc
        }, [])
        return returnSleepQuality
     }
+
 
   averageAllTimeHoursOfSleep(){
     let sum = 0;
