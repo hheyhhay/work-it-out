@@ -1,6 +1,4 @@
-const UserRepository = require('./UserRepository')
-const APIcalls = require('./apiCalls') // do we need API calls here?
-
+const APIcalls = require('./apiCalls')
 class User {
   constructor(userData) {
     this.user = userData;
@@ -8,11 +6,8 @@ class User {
 
   returnFirstName() {
     let firstName = this.user.name.split(' ')
-    return firstName[0]
+    return firstName[0];
   }
-
-
-
-}
+};
 
 module.exports = User;
