@@ -26,6 +26,7 @@ class Hydration {
     };
 
     weeklyWaterTotal(date, userID) {
+
       let sevenDays = [];
       sevenDays.push(date);
       let i = 0;
@@ -36,12 +37,8 @@ class Hydration {
       } while (i < 6);
 
       let weekWaterData = this.hydroData.reduce((acc, userData, index) => {
-        if (userData.userID === userID  && sevenDays.includes(userData.date)) {
-          console.log(acc)
-          acc.unshift(userData.numOunces)
-        } else if (userData.userID === userID  && !sevenDays.includes(userData.date)) {
-          return
-        }
+        userData.userID === userID  && sevenDays.includes(userData.date)
+         acc.unshift(userData.numOunces)
         return acc;
       }, [])
       return weekWaterData;
