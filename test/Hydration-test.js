@@ -1,10 +1,7 @@
 import { expect } from 'chai';
-import Sleep from '../src/Sleep';
-
 const Hydration = require('../src/Hydration')
 
 describe('Hydration', () => {
-
   let hydrationData;
   let hydration;
 
@@ -29,13 +26,10 @@ describe('Hydration', () => {
   });
 
   it('should intantiate with an array of objects', () => {
-
-
     expect(hydration).to.be.an.instanceOf(Hydration);
   });
 
   it('should find average fluid ounces per day for a specified user', () => {
-
     expect(hydration.averageWater(1)).to.equal(64.9);
   });
 
@@ -45,7 +39,7 @@ describe('Hydration', () => {
 
   it('should be able keep track of how much water is drinken each day for a week', () => {
     expect(hydration.weeklyWaterTotal("2019/06/21", 1)).to.deep.equal([ 50, 50, 91, 61, 96, 69, 37])
-  })
+  });
 
   it('should be able to keep track with a larger data set', () => {
     hydrationData = [
@@ -69,11 +63,6 @@ describe('Hydration', () => {
     ]
 
     hydration = new Hydration(hydrationData)
-
     expect(hydration.weeklyWaterTotal("2019/06/23", 2)).to.deep.equal([ 44, 58, 27, 71, 76, 70, 96])
-
   });
-
-
-
 })

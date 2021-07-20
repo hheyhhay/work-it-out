@@ -2,7 +2,7 @@
 var dayjs = require('dayjs')
 dayjs().format()
 //-----
-import'./css/styles.css';
+import './css/styles.css';
 // import {userData} from './data/users'; // won't need b/c its
 import Hydration from './Hydration';
 import Sleep from './Sleep';
@@ -15,8 +15,8 @@ import {renderInfo} from './dom';
 //I don't think these need to be global
 let userDataArray;
 let sleepDataArray;
-let activityDataArray;
 let hydrationDataArray;
+let activityDataArray;
 
 export let userRepo;
 export let user;
@@ -36,16 +36,16 @@ function fetchData() {
 };
 
 function parseValues(values) {
-
   userDataArray = values[0].userData;
   sleepDataArray = values[1].sleepData;
   activityDataArray = values[2].activityData;
   hydrationDataArray = values[3].hydrationData;
+
   instantiation();
   renderInfo();
 }
 
-function instantiation(){
+function instantiation() {
   let i = Math.floor(Math.random()*50);
   userRepo = new UserRepository(userDataArray);
   user = new User(userRepo.users[i]);
