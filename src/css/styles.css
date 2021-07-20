@@ -2,152 +2,96 @@
 
 html {
   height: 100%;
-  width: 100%;
-  overflow : scroll;
 }
 body {
-
-  background: rgb(238, 174, 202);
-  background: linear-gradient(to bottom, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100% );
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
-
+  background: linear-gradient(to bottom, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100% );
   height: 100%;
   width: 100%;
-  font-family: 'Pacifico', cursive;
-  font-size: 20px;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
   text-align: left;
-
 }
 
-/* .image {
-  width: 100%
-  height: 100px;
-  justify-content: left;
-} */
 /*  Greeting Header */
 h1 {
-  /* border: 2px solid blue; */
+  font-family: 'Pacifico';
   text-align: center;
   font-size: 50px;
-  height: 20%;
+  padding-bottom: 3%;
+  height: 10%;
+  margin: 0;
 }
 
 /* Name in info box */
-h2 {
-  /* border: 2px solid pink; */
-  padding-left: 10px;
-  padding-bottom: 0px;
-  margin-bottom: 5px;
-}
-
 li {
-  /* border: 2px solid purple; */
-  font-family: 'M PLUS Rounded 1c', sans-serif;
   list-style: none;
-  margin-top: 5px;
+  margin-top: 1%;
   text-align: center;
-}
-
-/* All text sizes */
-.text {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  margin-top: 5px;
 }
 
 /* container for all stats and info box */
 .user-personal-stats {
-  /* border: 2px solid purple; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   align-content: stretch;
-  height: 70%;
+  height: 90%;
 }
-.stats {
-  border: 2px solid white;
+
+/* Personal Information*/
+
+.personal-info {
   display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  width: 80%;
+}
+
+/*Date form*/
+
+.select-date {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+  width: 80%;
+}
+.submit-button {
+  background: rgba(10, 167, 137, 1);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  border-style: none;
+  font-weight: bold;
+}
+
+ /* Statistic boxes */
+
+.stats {
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
-
-
+  align-items: center;
   width: 100%;
   height: 100%;
 }
 
-.personal-info {
-  display: flex;
-  border: 1px solid black;
-  background-color: white;
-  flex-direction: column;
-  border-radius: 25px;
-  padding-bottom: 10%;
-  margin-bottom: 10%;
-  width: 75%;
-  height: 30%;
-}
-
-/* .quarter {
-  background: rgb(250, 199, 17);
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 100%;
-  width: 200px;
-  height: 200px;
-  position: right;
-} */
-
-
-
-
-
-
-
-
-/* .hydration {
-  border: 2px solid black;
-  background-color: white;
-  margin-bottom: 20%;
-  width: 100%;
-}
-.sleep {
-  border: 2px solid black;
-  background-color: white;
-} */
-
-.graph  {
-  display: flex;
-  border: 2px solid black;
-  background-color: white;
-  border-radius: 25px;
-  margin: 10%;
-
-}
-
-.graph-detail {
-  font-size: 25px;
-}
-
-.container {
-  width: 70%;
-  margin-bottom: 10%;
-  /* border: 2px solid black;
-  background-color: white; */
-
-}
 .rectangle {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   border-radius: 25px;
   background: white;
   border: 1px solid black;
-
-  width: 25%;
-  height: 100%;
+  width: 80%;
+  height: 30%;
 }
 
 .circle-container {
@@ -155,8 +99,9 @@ li {
   justify-content: center;
   align-items: center;
   padding-top: 10%;
+  padding-left: 3%;
   height: 40%;
-  /* border: 2px solid pink; */
+  width: 30%;
 }
 
 .circle {
@@ -165,25 +110,94 @@ li {
   border: 3px solid black;
   background: rgba(46, 155, 240, 1);
   border-radius: 100%;
-
   width: 75%;
   height: 100%;
 }
 
 .stat-text {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid black; */
-  padding-left: 10px;
-  padding-right: 10%;
+  padding: 15%;
+  text-align: left;
   margin: 0px;
-  height: 60%;
+  height: 30%;
+  width: 100%;
 }
+
 .moon {
-  background-color: rgba(84, 93, 186, 1)
+  background-color: rgba(84, 93, 186, 1);
 }
 
 .activity {
   background-color: rgba(10, 167, 137, 1);
 }
+
+/*Graph*/
+
+.graph {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 25px;
+  width: 80%;
+}
+
+/*Media Query*/
+@media screen and (min-width: 768px) {
+
+  html {
+    overflow: none;
+  }
+
+  h1 {
+    padding-top: 0;
+    padding-bottom: 0%;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 25%;
+  }
+
+  .rectangle {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: 5%;
+  }
+
+  .circle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 5%;
+    height: 40%;
+    width: 40%;
+  }
+
+  .select-date {
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 1%;
+  }
+
+  .stat-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .graph {
+    width: 50%;
+  }
+};

@@ -46,7 +46,7 @@ describe('Sleep', () => {
     expect(newSleepData.findSleepDay(2, "2019/06/18")).to.equal(10.8)
   });
 
-  it.skip('if day is not on the calendar return null', () => {
+  it('if day is not on the calendar return null', () => {
     expect(newSleepData.findSleepDay(1, "2021/1/21")).to.equal("null")
   });
 

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,20 +14,18 @@
 </head>
 
 <body id="body">
-
-  <div class="image"> image here</div>
-
-  <h1 id="greeting"> hello, Gladys </h1>
-
+  <!-- <div class="image"> image here</div> -->
+  <h1 id="greeting"></h1>
   <div class="user-personal-stats">
     <div class="personal-info">
-      <h2 class="name" id="name">`${name}`</h2>
-
-      <li class="address" id="address">address</li>
-      <li class="email" id="email">Vanessa_Gerhold@gmail.com</li>
-      <li class="friends" id="friends">list friends</li>
-
+      <li class="address" id="address">></li>
+      <li class="email" id="email"></li>
     </div>
+    <form action="http://localhost:8080/" class = "select-date">
+      <label for="date">Pick your date:</label>
+      <input type="date" id="date-selector" name="date" min = "2019-06-15" max = "2020-01-19">
+      <input type="submit" class="submit-button" id="button">
+    </form>
     <div class="stats text">
       <section class="rectangle">
         <div class="circle-container">
@@ -37,7 +33,7 @@
             <img src="https://img.icons8.com/ios/50/000000/splash.png" />
           </div>
         </div>
-        <h3 class="stat-text" id="waterStats"> Your water consumption is: 30% </h3>
+        <h3 class="stat-text" id="waterStats"></h3>
       </section>
       <section class="rectangle">
         <div class="circle-container">
@@ -45,7 +41,7 @@
             <img src="https://img.icons8.com/dotty/80/000000/crescent-moon.png" />
           </div>
         </div>
-        <h3 class="stat-text" id="sleepStats"> You slept 5.6 hours </h3>
+        <h3 class="stat-text" id="sleepStats"></h3>
       </section>
       <section class="rectangle">
         <div class="circle-container">
@@ -53,14 +49,15 @@
             <img src="https://img.icons8.com/wired/64/000000/wind.png" />
           </div>
         </div>
-        <h3 class="stat-text" id="stepGoals"> You are 10 steps away from your goal </h3>
+        <h3 class="stat-text" id="stepGoals"></h3>
       </section>
     </div>
     <div class="graph">
       <div class='container'><canvas id="myChart"></canvas></div>
-      <script class = "graph-detail">
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
+      <script id = "graph-detail">
+
+        let ctx = document.getElementById('myChart').getContext('2d');
+        let myChart = new Chart(ctx, {
           type: 'line',
           data: {
             labels: ['2021/13/07', '2021/14/07', '2021/15/07', '2021/16/07', '2021/17/07', '2021/18/07', 'today'],
@@ -69,17 +66,17 @@
               data: [2, 9, 3, 5, 2, 3, 8],
               fill: false,
               borderColor: [
-                'rgba(255, 99, 132, 1)',
+                'rgba(46, 155, 240, 1)',
               ],
-              borderWidth: 2
+              borderWidth: 7
             }, {
               label: 'Sleep',
               data: [2, 1, 3, 6, 2, 3, 6],
               fill: false,
               borderColor: [
-                'rgba(54, 162, 235, 1)',
+                'rgba(84, 93, 186, 1)',
               ],
-              borderWidth: 1
+              borderWidth: 7
             }]
           },
           options: {

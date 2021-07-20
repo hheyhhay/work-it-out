@@ -53,9 +53,6 @@ class Sleep {
   }
 
   findSleepQualityWeek(id, date) {
-    const userSleep = this.userSleepData.filter((user) => user.userID === id)
-    .find((user) => user.date === date);
-
     let sevenDaysData = [];
     sevenDaysData.push(date)
     let i = 0;

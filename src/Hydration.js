@@ -28,29 +28,24 @@ class Hydration {
     weeklyWaterTotal(date, userID) {
       let sevenDays = [];
       sevenDays.push(date);
-console.log(sevenDays)
       let i = 0;
 
       do {
         i++
         sevenDays.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')));
-      } while (i < 6)
+      } while (i < 6);
 
       let weekWaterData = this.hydroData.reduce((acc, userData, index) => {
         if (userData.userID === userID  && sevenDays.includes(userData.date)) {
-          if (sevenDays.length < 7) {
-            acc.unshift(userData.numOunces)
-          } else return
+          console.log(acc)
+          acc.unshift(userData.numOunces)
         } else if (userData.userID === userID  && !sevenDays.includes(userData.date)) {
-          if (sevenDays.length < 7) {
-            acc.unshift('null')
-          } else return
+          return
         }
         return acc;
       }, [])
       return weekWaterData;
     }
-
 
 };
 

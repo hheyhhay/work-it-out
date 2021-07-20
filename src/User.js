@@ -1,6 +1,4 @@
-const UserRepository = require('./UserRepository')
-const APIcalls = require('./apiCalls') // do we need API calls here?
-
+const APIcalls = require('./apiCalls')
 class User {
   constructor(userData) {
     this.user = userData;
