@@ -5,7 +5,7 @@ class UserRepository {
 
   getUserByID(userID) {
     let selectedUser = this.users.find((user) => {
-      if(user.id === userID) {
+      if (user.id === userID) {
         return user
       }
     })
@@ -19,6 +19,6 @@ class UserRepository {
     }, 0) / this.users.length
     return averageSteps
   }
-}
+};
 
 module.exports = UserRepository;
