@@ -1,18 +1,18 @@
 
 
-# Title
-Mod 2 Work It Out
+# Work it Out
+Mod 2: Paired Prorjoect
 
 
 ## Table of Contents
   - [Abstract](#abstract)
-  - [Technologies](#technologies)
-  - [Code Architecture](#code-architecture)
+  - [Technologies](#technologies)![recording (3)](https://user-images.githubusercontent.com/78764587/126402186-1e6694de-f2ce-4086-a2db-b89a787eb27f.gif)
+
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
-	- [Wins](#wins)
-	- [Challenges + Improvements](#challenges-+-Improvements)
+  - [Wins](#wins)
+  - [Challenges + Improvements](#challenges-+-Improvements)
   - [Project Specs](#project-specs)
 
 ## Abstract
