@@ -83,7 +83,7 @@ function instantiation(){
 
 /// All DOM Minipulation here -> move to seprate file
 function renderUser() {
-let greetingHTML = `Hello, ${user.returnFirstName()}!`
+let greetingHTML = `☀️ Hello, ${user.returnFirstName()}! ☀️`
 greeting.innerHTML = greetingHTML;
 }
 

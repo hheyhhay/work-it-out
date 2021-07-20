@@ -28,6 +28,7 @@ h1 {
   text-align: center;
   font-size: 50px;
   height: 10%;
+  margin: 0;
 }
 
 /* Name in info box */
@@ -103,7 +104,6 @@ li {
   border-radius: 25px;
   background: white;
   border: 1px solid black;
-
   width: 80%;
   height: 30%;
 }
@@ -153,20 +153,20 @@ li {
 
 /*Graph*/
 .graph  {
-  display: flex;
+
   border: 1px solid black;
   background-color: white;
   border-radius: 25px;
   margin: 5%;
 
+
 }
 
 
 .container {
+  display: flex;
   width: 80%;
   margin-bottom: 10%;
-  /* border: 2px solid black;
-  background-color: white; */
 
 }
 
@@ -185,34 +185,45 @@ li {
 
   .stats {
     border: 5px solid blue;
-    display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
-    height: 100%;
+
   }
 
   .rectangle {
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+  }
+  .circle-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 25px;
-    background: white;
-    border: 1px solid black;
+    align-items: center;
+    border: 2px solid pink;
+    padding-top: 10%;
+    height: 40%;
+    width: 40%;
 
-    width: 25%;
-    height: 100%;
   }
 
   .stat-text {
     display: flex;
-
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0%;
+    margin: 3%;
+
     /* border: 2px solid black; */
-    padding-left: 10px;
-    padding-right: 10%;
-    margin: 0px;
-    height: 60%;
+
+
+
+
   }
+
+  /* .container {
+    height: 30%;
+  } */
 };
