@@ -1,28 +1,27 @@
 import { expect } from 'chai';
 import Sleep from '../src/Sleep';
 
-const User = require('../src/User')
 
 
 describe('Sleep', () => {
 
   let newSleepData
     beforeEach(() => {
-      newSleepData = new Sleep([
-      {"userID":1,"date":"2019/06/17","hoursSlept":5.1,"sleepQuality":3.2},
-      {"userID":2,"date":"2019/06/17","hoursSlept":7.6,"sleepQuality":4},
-      {"userID":1,"date":"2019/06/18","hoursSlept":10.4,"sleepQuality":3.1},
-      {"userID":2,"date":"2019/06/18","hoursSlept":10.8,"sleepQuality":3.2},
-      {"userID":1,"date":"2019/06/19","hoursSlept":9.8,"sleepQuality":2.6},
-      {"userID":2,"date":"2019/06/19","hoursSlept":5.9,"sleepQuality":2.5},
-      {"userID":1,"date":"2019/06/20","hoursSlept":5.2,"sleepQuality":4.1},
-      {"userID":2,"date":"2019/06/20","hoursSlept":5.5,"sleepQuality":4},
-      {"userID":1,"date":"2019/06/21","hoursSlept":5.5,"sleepQuality":1.4},
-      {"userID":2,"date":"2019/06/21","hoursSlept":8.2,"sleepQuality":2.4},
-      {"userID":1,"date":"2019/06/22","hoursSlept":5.5,"sleepQuality":1.4},
-      {"userID":2,"date":"2019/06/22","hoursSlept":8.2,"sleepQuality":2.4},
-      {"userID":1,"date":"2019/06/23","hoursSlept":5.5,"sleepQuality":1.4},
-      {"userID":2,"date":"2019/06/23","hoursSlept":8.2,"sleepQuality":2.4}
+    newSleepData = new Sleep([
+      { "userID":1, "date":"2019/06/17", "hoursSlept":5.1, "sleepQuality":3.2 },
+      { "userID":2, "date":"2019/06/17", "hoursSlept":7.6, "sleepQuality":4 },
+      { "userID":1, "date":"2019/06/18", "hoursSlept":10.4, "sleepQuality":3.1 },
+      { "userID":2, "date":"2019/06/18", "hoursSlept":10.8, "sleepQuality":3.2 },
+      { "userID":1, "date":"2019/06/19", "hoursSlept":9.8, "sleepQuality":2.6 },
+      { "userID":2, "date":"2019/06/19", "hoursSlept":5.9, "sleepQuality":2.5 },
+      { "userID":1, "date":"2019/06/20", "hoursSlept":5.2, "sleepQuality":4.1 },
+      { "userID":2, "date":"2019/06/20", "hoursSlept":5.5, "sleepQuality":4 },
+      { "userID":1, "date":"2019/06/21", "hoursSlept":5.5, "sleepQuality":1.4 },
+      { "userID":2, "date":"2019/06/21", "hoursSlept":8.2, "sleepQuality":2.4 },
+      { "userID":1, "date":"2019/06/22", "hoursSlept":5.5, "sleepQuality":1.4 },
+      { "userID":2, "date":"2019/06/22", "hoursSlept":8.2, "sleepQuality":2.4 },
+      { "userID":1, "date":"2019/06/23", "hoursSlept":5.5, "sleepQuality":1.4 },
+      { "userID":2, "date":"2019/06/23", "hoursSlept":8.2, "sleepQuality":2.4}
     ])
   })
 

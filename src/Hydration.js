@@ -5,7 +5,7 @@ class Hydration {
     this.hydroData = hydrationData;
   }
 
-  averageWater(userID){
+  averageWater(userID) {
     let foundUser = this.hydroData.filter((user) => {
       return user.userID === userID;
     })
@@ -15,36 +15,37 @@ class Hydration {
       return acc;
     }, 0)
 
-    averageWater = Number((averageWater/foundUser.length).toFixed(1));
+    averageWater = Number((averageWater / foundUser.length).toFixed(1));
 
     return averageWater;
   }
 
-    waterByDate(date, userID) {
-      let foundUser = this.hydroData.filter((user) => user.userID === userID ).find((user) => user.date === date)
-      return foundUser.numOunces;
-    };
+  waterByDate(date, userID) {
+    let foundUser = this.hydroData.filter((user) => user.userID === userID ).find((user) => user.date === date)
 
-    weeklyWaterTotal(date, userID) {
+    return foundUser.numOunces;
+  }
 
-      let sevenDays = [];
-      sevenDays.push(date);
-      let i = 0;
+  weeklyWaterTotal(date, userID) {
 
-      do {
-        i++
-        sevenDays.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')));
-      } while (i < 6);
+    let sevenDays = [];
+    let i = 0;
 
-      let weekWaterData = this.hydroData.reduce((acc, userData, index) => {
-        userData.userID === userID  && sevenDays.includes(userData.date)
-         acc.unshift(userData.numOunces)
+    sevenDays.push(date);
+
+    do {
+      i++
+      sevenDays.push((dayjs(date).subtract(i, 'day').format('YYYY/MM/DD')));
+    } while (i < 6);
+
+    let weekWaterData = this.hydroData.reduce((acc, userData, index) => {
+      userData.userID === userID  && sevenDays.includes(userData.date)
+        acc.unshift(userData.numOunces)
         return acc;
       }, [])
-      return weekWaterData;
-    }
 
+    return weekWaterData;
+  }
 };
-
 
 module.exports = Hydration;

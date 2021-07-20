@@ -7,7 +7,6 @@ Mod 2 Work It Out
 ## Table of Contents
   - [Abstract](#abstract)
   - [Technologies](#technologies)
-  - [Code Architecture](#code-architecture)
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
@@ -64,6 +63,8 @@ Our future improvements are:
   - Allow user to choice the date using a drop down calendar
   - Allow user to see their friends and their friends' datasets
   - Add more interactivity in the HTML/CSS design using JavaScript
+  - Store our weekly data as objects in arrays to better keep track and utilize our datasets
+  - Allows our class methods to test for not complete week sets 
 
 ## Project Specs
   - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/fitlit.html)

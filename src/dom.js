@@ -1,4 +1,4 @@
-import {userRepo, user, hydration, sleep, startDate} from './scripts';
+import {userRepo, user, hydration, sleep} from './scripts';
 
 let greeting = document.getElementById('greeting');
 let address = document.getElementById('address');
@@ -6,20 +6,16 @@ let email = document.getElementById('email');
 let stepGoals = document.getElementById('stepGoals');
 let waterStats = document.getElementById('waterStats')
 let sleepStats = document.getElementById('sleepStats')
-//let graph = document.getElementById('graph-detail');
 let myChart = document.getElementById('myChart').getContext('2d');
 
 
 const renderGraph = () => {
-  console.log(hydration.weeklyWaterTotal("2019/07/30", user.user.id))
-  console.log(sleep.findSleepWeek(user.user.id, "2019/07/30"))
   let displayChart = new Chart(myChart, {
       type: 'line',
       data: {
-        labels: ['2021/13/07', '2021/14/07', '2021/15/07', '2021/16/07', '2021/17/07', '2021/18/07', 'today'],
+        labels: ['2019/07/24', '2019/07/25', '2019/07/26', '2019/07/27', '2019/07/28', '2019/07/29', 'Today'],
         datasets: [{
           label: 'Hydration',
-
           data: hydration.weeklyWaterTotal("2019/07/30", user.user.id),
           fill: false,
           borderColor: [
@@ -45,7 +41,6 @@ const renderGraph = () => {
       }
     });
 }
-
 
 const renderUser = () => {
   let greetingHTML = `☀️ Hello, ${user.returnFirstName()}! ☀️`
