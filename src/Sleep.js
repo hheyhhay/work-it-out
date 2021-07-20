@@ -25,8 +25,6 @@ class Sleep {
       return userSleep.hoursSlept
   }
 
-
-
   findSleepQualityDay(id, date) {
     const userSleep = this.userSleepData.filter((user) => user.userID === id)
     .find((user) => user.date === date);
