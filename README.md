@@ -6,8 +6,7 @@ Mod 2: Paired Prorjoect
 
 ## Table of Contents
   - [Abstract](#abstract)
-  - [Technologies](#technologies)![recording (3)](https://user-images.githubusercontent.com/78764587/126402186-1e6694de-f2ce-4086-a2db-b89a787eb27f.gif)
-
+  - [Technologies](#technologies)
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
@@ -45,7 +44,8 @@ Instruction for API installation:
 
 ## Illustrations
 
-Use https://gifcap.dev/ to make GIFs
+![recording (3)](https://user-images.githubusercontent.com/78764587/126402186-1e6694de-f2ce-4086-a2db-b89a787eb27f.gif)
+Our site in action! Designed for mobile and reformatted using media query for computers. 
 
 #Contributors
   - [Hayley Dixon](https://github.com/hheyhhay)
