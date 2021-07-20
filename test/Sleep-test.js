@@ -47,7 +47,7 @@ describe('Sleep', () => {
   });
 
   it('if day is not on the calendar return null', () => {
-    expect(newSleepData.findSleepDay(1, "2021/1/21")).to.equal("null")
+    expect(newSleepData.findSleepDay(1, "2021/1/21")).to.equal(null)
   });
 
   it('should return the quality of sleep on a specific day', () => {
@@ -59,7 +59,7 @@ describe('Sleep', () => {
   });
 
   it('should return null if dates are outside of date range  (7 Days)', () => {
-    expect(newSleepData.findSleepWeek(1, "2020/01/19")).to.deep.equal(["null", "null", "null", "null", "null", "null", "null"])
+    expect(newSleepData.findSleepWeek(1, "2020/01/19")).to.deep.equal([null, null, null, null, null, null, null])
   });
 
   it('should return sleep quality over the course of a given week (7 Days)', () => {
@@ -67,7 +67,7 @@ describe('Sleep', () => {
   });
 
   it('should return null if dates are outside of date range  (7 Days)', () => {
-    expect(newSleepData.findSleepQualityWeek(1, "2020/01/19")).to.deep.equal(["null", "null", "null", "null", "null", "null", "null"])
+    expect(newSleepData.findSleepQualityWeek(1, "2020/01/19")).to.deep.equal([null, null, null, null, null, null, null])
   });
 
   it('should return all time average of all users combined', () => {
