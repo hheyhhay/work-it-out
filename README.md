@@ -1,7 +1,7 @@
 
 
-# Title
-Mod 2 Work It Out
+# Work it Out
+Mod 2: Paired Prorjoect
 
 
 ## Table of Contents
@@ -10,8 +10,8 @@ Mod 2 Work It Out
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
-	- [Wins](#wins)
-	- [Challenges + Improvements](#challenges-+-Improvements)
+  - [Wins](#wins)
+  - [Challenges + Improvements](#challenges-+-Improvements)
   - [Project Specs](#project-specs)
 
 ## Abstract
@@ -44,7 +44,8 @@ Instruction for API installation:
 
 ## Illustrations
 
-Use https://gifcap.dev/ to make GIFs
+![recording (3)](https://user-images.githubusercontent.com/78764587/126402186-1e6694de-f2ce-4086-a2db-b89a787eb27f.gif)
+Our site in action! Designed for mobile and reformatted using media query for computers. 
 
 #Contributors
   - [Hayley Dixon](https://github.com/hheyhhay)
@@ -53,7 +54,7 @@ Use https://gifcap.dev/ to make GIFs
 ## Wins
 [Janika Hortizuela](https://github.com/jhortizu01) and [Hayley Dixon](https://github.com/hheyhhay) were able to successfully:
 
-	- Connect the API to our scripts.js
+  - Connect the API to our scripts.js
   - Install and use npm's day.js and chart.js
   - Use media queries to have a responsive layout
   - successfully use Webpack to connect all the files
